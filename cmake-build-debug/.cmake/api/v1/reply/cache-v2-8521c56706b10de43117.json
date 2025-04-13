@@ -55,7 +55,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "c:/Users/demo/Desktop/uni/4\u00ba sem/SO/projeto1/cmake-build-debug"
+			"value" : "c:/Users/demo/Documents/GitHub/projeto_SO/cmake-build-debug"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -431,7 +431,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/demo/Desktop/uni/4\u00ba sem/SO/projeto1/cmake-build-debug/CMakeFiles/pkgRedirects"
+			"value" : "C:/Users/demo/Documents/GitHub/projeto_SO/cmake-build-debug/CMakeFiles/pkgRedirects"
 		},
 		{
 			"name" : "CMAKE_GENERATOR",
@@ -503,7 +503,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "C:/Users/demo/Desktop/uni/4\u00ba sem/SO/projeto1"
+			"value" : "C:/Users/demo/Documents/GitHub/projeto_SO"
 		},
 		{
 			"name" : "CMAKE_INSTALL_PREFIX",
@@ -1131,7 +1131,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/demo/Desktop/uni/4\u00ba sem/SO/projeto1/cmake-build-debug"
+			"value" : "C:/Users/demo/Documents/GitHub/projeto_SO/cmake-build-debug"
 		},
 		{
 			"name" : "projeto1_IS_TOP_LEVEL",
@@ -1155,7 +1155,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/demo/Desktop/uni/4\u00ba sem/SO/projeto1"
+			"value" : "C:/Users/demo/Documents/GitHub/projeto_SO"
 		}
 	],
 	"kind" : "cache",

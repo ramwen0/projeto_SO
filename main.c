@@ -1,6 +1,6 @@
 #include <string.h>
 #include <stdio.h>
-#include <stdlib.h>  // Add for exit()
+#include <stdlib.h>
 #include "include/inputs.h"
 #include "include/simulation.h"
 

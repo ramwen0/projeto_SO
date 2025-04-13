@@ -3,8 +3,8 @@ time inst	proc1		proc2		proc3		proc4		proc5		proc6		proc7		proc8		proc9		proc10	
 2       	NEW     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
 3       	RUN     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
 4       	RUN     	NEW     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
-5       	EXIT    	NEW     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
-6       	        	NEW     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
+5       	        	NEW     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
+6       	        	RUN     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
 7       	        	RUN     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
 8       	        	RUN     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
 9       	        	RUN     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        

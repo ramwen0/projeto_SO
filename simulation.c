@@ -16,7 +16,7 @@ void initialize_system_with_input(SimulationSystem* system, SimulationInput inpu
         system->processes[i] = NULL;
     }
 
-    for(int i = 0; i < input.rows && i < 5; i++) {  // Ensure i < 5
+    for(int i = 0; i < input.rows && i < 5; i++) {
         for (int j = 0; j < 20; j++) {
             system->programs[i][j] = input.programs[i][j];
         }
@@ -24,7 +24,7 @@ void initialize_system_with_input(SimulationSystem* system, SimulationInput inpu
         system->program_lengths[i] = 20;
         for (int j = 0; j < 20; j++) {
             if (input.programs[i][j] == 0) {
-                system->program_lengths[i] = j + 1;
+                system->program_lengths[i] = j;
                 break;
             }
         }
@@ -39,9 +39,10 @@ void initialize_system_with_input(SimulationSystem* system, SimulationInput inpu
 
     PCB* first_process = (PCB*)calloc(1, sizeof(PCB));
     first_process->pid = 1;
-    first_process->state = NEW;       // Start as NEW
-    first_process->time_in_state = 0; // Not yet eligible for READY
+    first_process->state = NEW;
+    first_process->time_in_state = 0;
     first_process->pc = 0;
+    first_process->program_id = 0;
     first_process->instruction_count = system->program_lengths[0];
     first_process->instructions = (int*)malloc(first_process->instruction_count * sizeof(int));
 
@@ -80,6 +81,12 @@ void update_blocked_processes(SimulationSystem* system) {
     }
 }
 
+void enqueue_new_process(SimulationSystem* system, PCB* process) {
+    if (!system || !process) return;
+
+    enqueue(system->new_queue, process);
+}
+
 void update_new_processes(SimulationSystem* system) {
     if (!system->new_queue) return;
 
@@ -89,11 +96,11 @@ void update_new_processes(SimulationSystem* system) {
         if (!proc) continue;
 
         proc->time_in_state++;
-        if (proc->time_in_state > 2) {  // Wait 2 full time units
+        if (proc->time_in_state > 2) {
             proc->state = READY;
             if (removeNodeByData(system->new_queue, proc)) {
                 enqueue(system->ready_queue, proc);
-                i--;  // Adjust index after removal
+                i--;
                 size--;
             }
         }
@@ -132,11 +139,6 @@ void execute_instruction(SimulationSystem* system, PCB* proc, int instruction) {
         return;
     }
 
-    if (!proc->instructions) {
-        proc->state = EXIT;
-        return;
-    }
-
     if (instruction == 0 || proc->pc < 0 || proc->pc >= proc->instruction_count) {
         proc->state = EXIT;
         return;
@@ -146,22 +148,22 @@ void execute_instruction(SimulationSystem* system, PCB* proc, int instruction) {
         int jump = instruction - 100;
         proc->pc = (proc->pc - jump >= 0) ? proc->pc - jump : 0;
     }
-
     else if (instruction >= 201 && instruction <= 299) { // EXEC
         int program_id = instruction % 100;
         if (system->next_pid <= 20 && program_id >= 0 && program_id < 5) {
             PCB* new_proc = create_new_process(system, program_id);
             if (new_proc) {
                 new_proc->state = NEW;
-                new_proc->time_in_state = 0; // Start counting from 0
-                enqueue(system->new_queue, new_proc); // Add immediately
+                new_proc->time_in_state = 0;
+                enqueue(system->new_queue, new_proc);
             }
         }
     }
-
-    if (instruction < 0) { // I/O
+    else if (instruction < 0) { // I/O
         proc->state = BLOCKED;
         proc->blocked_until = system->current_time + (-instruction);
+        enqueue(system->blocked_queue, proc);
+        system->running_process = NULL;
         return;
     }
 
@@ -179,9 +181,10 @@ PCB* create_new_process(SimulationSystem* system, int prog_id) {
     new_process->pid = system->next_pid++;
     new_process->program_id = prog_id;
     new_process->state = NEW;
-    new_process->time_in_state = 0; // Critical initialization
+    new_process->time_in_state = 0;
     new_process->remaining_quantum = 0;
     new_process->blocked_until = 0;
+    new_process->pc = 0;
 
     int length = system->program_lengths[prog_id];
     new_process->instruction_count = length;
@@ -198,6 +201,7 @@ PCB* create_new_process(SimulationSystem* system, int prog_id) {
     }
 
     system->processes[new_process->pid - 1] = new_process;
+
     return new_process;
 }
 
@@ -231,7 +235,7 @@ void execute_running_process(SimulationSystem* system) {
 
 /* Process Scheduling */
 void schedule_next_process(SimulationSystem* system) {
-    if (!system || system->running_process) return; // Already running
+    if (!system || system->running_process) return;
 
     if (!isEmpty(system->ready_queue)) {
         PCB* next = dequeue(system->ready_queue);
@@ -265,6 +269,8 @@ void print_current_state(SimulationSystem* system, int time) {
                 case EXIT:    state = "EXIT";    break;
                 default:      state = "?";       break;
             }
+        } else {
+            state = "";
         }
 
         printf("\t%-8s", state);
@@ -277,20 +283,34 @@ void run_simulation(SimulationSystem* system) {
     for (int time = 1; time <= 100; time++) {
         system->current_time = time;
 
-        // 1. First update all process states
+        // Debug: Print current time
+
+        // Update all process states
         update_exit_processes(system);
         update_blocked_processes(system);
         update_new_processes(system);
 
-        // 2. Execute current running process (may create new processes)
+        // Execute the running process
         if (system->running_process) {
-            execute_running_process(system); // New processes created here
+            execute_running_process(system);
         }
 
-        // 3. Schedule next process
-        schedule_next_process(system);
+        // Schedule the next process
+        if (!system->running_process) {
+            schedule_next_process(system);
+        }
 
+        // Print system state
         print_current_state(system, time);
+
+        // Check for termination
+        if (isEmpty(system->new_queue) &&
+            isEmpty(system->ready_queue) &&
+            isEmpty(system->blocked_queue) &&
+            isEmpty(system->exit_queue) &&
+            !system->running_process) {
+            break;
+        }
     }
 }
 
@@ -298,7 +318,6 @@ void run_simulation(SimulationSystem* system) {
 void cleanup_simulation(SimulationSystem* system) {
     if (!system) return;
 
-    // Clean up all processes
     for (int i = 0; i < 20; i++) {
         if (system->processes[i]) {
             if (system->processes[i]->instructions) {
@@ -309,7 +328,6 @@ void cleanup_simulation(SimulationSystem* system) {
         }
     }
 
-    // Clean up queues
     if (system->new_queue) deleteQueue(system->new_queue);
     if (system->ready_queue) deleteQueue(system->ready_queue);
     if (system->blocked_queue) deleteQueue(system->blocked_queue);
