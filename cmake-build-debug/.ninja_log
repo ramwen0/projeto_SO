@@ -1,0 +1,26 @@
+# ninja log v5
+29	133	7662812920289414	CMakeFiles/projeto1.dir/inputs.c.obj	22cc274d04b3f50b
+210	347	7662812922373935	projeto1.exe	f221c6a3e19657b0
+12	166	7662812920630813	CMakeFiles/projeto1.dir/queue.c.obj	184bfeffcdda48d1
+4	169	7662812920640866	CMakeFiles/projeto1.dir/main.c.obj	c66aee352b89d335
+20	209	7662812921067853	CMakeFiles/projeto1.dir/simulation.c.obj	bda2b12aa33bb8a0
+25	124	7662814692144742	CMakeFiles/projeto1.dir/inputs.c.obj	22cc274d04b3f50b
+3	143	7662814692361985	CMakeFiles/projeto1.dir/queue.c.obj	184bfeffcdda48d1
+10	156	7662814692496158	CMakeFiles/projeto1.dir/main.c.obj	c66aee352b89d335
+18	185	7662814692786673	CMakeFiles/projeto1.dir/simulation.c.obj	bda2b12aa33bb8a0
+189	318	7662814694038471	projeto1.exe	f221c6a3e19657b0
+15	95	7662815158909509	CMakeFiles/projeto1.dir/inputs.c.obj	22cc274d04b3f50b
+2	122	7662815159164029	CMakeFiles/projeto1.dir/queue.c.obj	184bfeffcdda48d1
+9	145	7662815159399018	CMakeFiles/projeto1.dir/main.c.obj	c66aee352b89d335
+22	180	7662815159758298	CMakeFiles/projeto1.dir/simulation.c.obj	bda2b12aa33bb8a0
+180	315	7662815161041405	projeto1.exe	f221c6a3e19657b0
+15	97	7662815574682185	CMakeFiles/projeto1.dir/inputs.c.obj	22cc274d04b3f50b
+3	130	7662815575012503	CMakeFiles/projeto1.dir/main.c.obj	c66aee352b89d335
+9	132	7662815575032504	CMakeFiles/projeto1.dir/queue.c.obj	184bfeffcdda48d1
+22	169	7662815575413439	CMakeFiles/projeto1.dir/simulation.c.obj	bda2b12aa33bb8a0
+169	287	7662815576531656	projeto1.exe	f221c6a3e19657b0
+16	117	7662819492231344	CMakeFiles/projeto1.dir/inputs.c.obj	22cc274d04b3f50b
+9	149	7662819492564077	CMakeFiles/projeto1.dir/queue.c.obj	184bfeffcdda48d1
+2	154	7662819492611031	CMakeFiles/projeto1.dir/main.c.obj	c66aee352b89d335
+24	197	7662819493053737	CMakeFiles/projeto1.dir/simulation.c.obj	bda2b12aa33bb8a0
+197	335	7662819494349705	projeto1.exe	f221c6a3e19657b0
