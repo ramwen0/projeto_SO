@@ -1,5 +1,3 @@
-#include "include/inputs.h"
-
 int input00[5][20] = {
     { 203,    4,     2 },
     {   1,   -3,   202 },

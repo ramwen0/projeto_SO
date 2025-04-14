@@ -9,16 +9,16 @@
 enum STATES {NEW, READY, RUNNING, BLOCKED, EXIT};
 #define NUM_INPUTS 6
 
-typedef struct {
+typedef struct PCB {
     int pid;
     int program_id;
-    int pc;
-    int state;              // Estado atual
-    int remaining_quantum;  // Tempo restante no quantum
+    enum STATES state;
+    int time_in_state;
+    int remaining_quantum;
     int blocked_until;
-    int time_in_state;      // Tempo no estado atual - NEW,EXIT
-    int* instructions;      // pointer para as instruções do programa
-    int instruction_count;  // Número de instruções do programa
+    int pc;
+    int instruction_count;
+    int* instructions;
 } PCB;
 
 typedef struct {
@@ -50,12 +50,13 @@ void execute_running_process(SimulationSystem* system);
 
 //Instruction/Process interaction
 PCB* create_new_process(SimulationSystem* system, int prog_id);
-void move_process_to_ready(SimulationSystem* system, PCB* process);
 
 //Scheduling
 void schedule_next_process(SimulationSystem* system);
 
 //Output
 void print_current_state(SimulationSystem* system, int time);
+
+void remove_process_from_all_queues(SimulationSystem* system, PCB* proc);
 
 #endif
