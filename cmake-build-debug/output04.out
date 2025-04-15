@@ -1,0 +1,17 @@
+===== Process Instructions =====
+Program 0: [215, 202, 1, -3, -50, 200, 50, -25, 250, 400]
+Program 1: [203, 204, 3, 23, 55, 205]
+Program 2: [201, 2, 3, 3443, -60, 210]
+Program 3: [2, 4, 5, 4554, -65, 215]
+Program 4: [205, 206, 7, 5665, -70, 310]
+=================================
+time inst	proc1	proc2	proc3	proc4	proc5	proc6	proc7	proc8	proc9	proc10	proc11	proc12	proc13	proc14	proc15	proc16	proc17	proc18	proc19	proc20
+1       	NEW     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
+PID: 1, STATE: NEW, TIS: 0
+2       	NEW     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
+PID: 1, STATE: NEW, TIS: 1
+3       	RUN     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
+Executing PID 1: PC=0, Inst=1217290048, Quantum=3
+Error: Invalid process or PC. PID: 1, PC: 0, inst: 1217290048
+4       	EXIT    	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
+5       	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        

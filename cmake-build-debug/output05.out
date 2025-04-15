@@ -1,17 +1,17 @@
-=== Process Instructions ===
-Process 1 (Program 0): [202, 201, 102, 4]
-===========================
+===== Process Instructions =====
+Program 0: [202, 201, 102, 4]
+Program 1: []
+Program 2: [-471, -280, 6, 666, 10]
+Program 3: [-149, 428, 84, 610, 748, -84, -413, 539, -253, 628, -101]
+Program 4: [-73, -323, 341, -192, 441, -59, 479, 737, -19, 326, -46, 238331856, -1, 238329328]
+=================================
 time inst	proc1	proc2	proc3	proc4	proc5	proc6	proc7	proc8	proc9	proc10	proc11	proc12	proc13	proc14	proc15	proc16	proc17	proc18	proc19	proc20
 1       	NEW     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
+PID: 1, STATE: NEW, TIS: 0
 2       	NEW     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
+PID: 1, STATE: NEW, TIS: 1
 3       	RUN     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
-Executing PID 1: PC=0, Inst=202, Quantum=3
-Process 1: Running with Q=3
-4       	RUN     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
-Executing PID 1: PC=0, Inst=202, Quantum=2
-Process 1: Running with Q=2
-5       	RUN     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
-Executing PID 1: PC=0, Inst=202, Quantum=1
-Process 1: Running with Q=1
-6       	EXIT    	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
-7       	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
+Executing PID 1: PC=0, Inst=1217291072, Quantum=3
+Error: Invalid process or PC. PID: 1, PC: 0, inst: 1217291072
+4       	EXIT    	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
+5       	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
