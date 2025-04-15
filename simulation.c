@@ -183,7 +183,7 @@ void execute_running_process(SimulationSystem* system) {
     //DEBUG -- Inst wrong!
     printf(
             "Executing PID %d: PC=%d, Inst=%d, Quantum=%d\n",
-            running_proc->pid, running_proc->pc, system->programs[running_proc->pid][running_proc->pc], running_proc->remaining_quantum
+            running_proc->pid, running_proc->pc, running_proc->instructions[running_proc->pc], running_proc->remaining_quantum
     );
 
     if (running_proc->pc > running_proc->instruction_count || // out of bounds or
@@ -198,6 +198,7 @@ void execute_running_process(SimulationSystem* system) {
     }
 
     int instruction = running_proc->instructions[running_proc->pc];
+    printf("Inst: %d\n", instruction);
     execute_instruction(system, running_proc, instruction);
 
     if (running_proc->state == RUNNING){
@@ -272,7 +273,6 @@ void print_process_instructions(const SimulationSystem* system) {
                 printf(", ");
         }
         printf("]\n");
-        printf("length: %d", system->program_lengths[prog_id]);
     }
     printf("=================================\n");
 }

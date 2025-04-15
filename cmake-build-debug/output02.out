@@ -1,26 +1,30 @@
 ===== Process Instructions =====
 Program 0: [203, 99, -11]
-length: 3Program 1: [3, 2222, -20]
-length: 3Program 2: [40, 202, -5]
-length: 3Program 3: []
-length: 0Program 4: []
-length: 0=================================
+Program 1: [3, 2222, -20]
+Program 2: [40, 202, -5]
+Program 3: []
+Program 4: []
+=================================
 time inst	proc1	proc2	proc3	proc4	proc5	proc6	proc7	proc8	proc9	proc10	proc11	proc12	proc13	proc14	proc15	proc16	proc17	proc18	proc19	proc20
 1       	NEW     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
 2       	RUN     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
-Executing PID 1: PC=0, Inst=3, Quantum=3
+Executing PID 1: PC=0, Inst=203, Quantum=3
+Inst: 203
 PID: 1, PC: 0, inst: 203, EXEC: 3
 Process 1: Running with Q=3
 3       	RUN     	NEW     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
-Executing PID 1: PC=1, Inst=2222, Quantum=2
+Executing PID 1: PC=1, Inst=99, Quantum=2
+Inst: 99
 PID: 1, PC: 1, inst: 99, MISC
 Process 1: Running with Q=2
 4       	RUN     	NEW     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
-Executing PID 1: PC=2, Inst=-20, Quantum=1
+Executing PID 1: PC=2, Inst=-11, Quantum=1
+Inst: -11
 PID: 1, PC: 2, inst: -11, BLOCK: 16
 5       	BLOCKED 	RUN     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
-Executing PID 2: PC=0, Inst=40, Quantum=3
-Error: Invalid process or PC. PID: 2, PC: 0, inst: 931491840
+Executing PID 2: PC=0, Inst=-76845056, Quantum=3
+Inst: -76845056
+Error: Invalid process or PC. PID: 2, PC: 0, inst: -76845056
 6       	BLOCKED 	EXIT    	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
 7       	BLOCKED 	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
 8       	BLOCKED 	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
@@ -32,8 +36,9 @@ Error: Invalid process or PC. PID: 2, PC: 0, inst: 931491840
 14      	BLOCKED 	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
 15      	BLOCKED 	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
 16      	RUN     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
-Executing PID 1: PC=3, Inst=0, Quantum=3
-Error: Invalid process or PC. PID: 1, PC: 3, inst: 457
+Executing PID 1: PC=3, Inst=616, Quantum=3
+Inst: 616
+Error: Invalid process or PC. PID: 1, PC: 3, inst: 616
 17      	EXIT    	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
 18      	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
 19      	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
