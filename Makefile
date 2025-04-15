@@ -7,7 +7,7 @@ LDFLAGS =
 TARGET = so_simulator
 
 # Diretórios
-SRCDIR = src
+SRCDIR = .
 INCDIR = include
 OBJDIR = obj
 BINDIR = bin
@@ -17,32 +17,31 @@ SOURCES = $(wildcard $(SRCDIR)/*.c)
 OBJECTS = $(patsubst $(SRCDIR)/%.c,$(OBJDIR)/%.o,$(SOURCES))
 DEPS = $(INCDIR)/simulation.h $(INCDIR)/queue.h $(INCDIR)/inputs.h
 
-
 # Regra principal
 all: directories $(BINDIR)/$(TARGET)
 
 # Cria os diretórios necessários
 directories:
-	mkdir -p $(OBJDIR) $(BINDIR)
+	    mkdir -p $(OBJDIR) $(BINDIR)
 
 # Regra de compilação
 $(OBJDIR)/%.o: $(SRCDIR)/%.c $(DEPS)
-	$(CC) $(CFLAGS) -I$(INCDIR) -c $< -o $@
+	    $(CC) $(CFLAGS) -I$(INCDIR) -c $< -o $@
 
 # Regra de linking
 $(BINDIR)/$(TARGET): $(OBJECTS)
-	$(CC) $(CFLAGS) $(LDFLAGS) $^ -o $@
+	    $(CC) $(CFLAGS) $(LDFLAGS) $^ -o $@
 
 # Regra para limpar
 clean:
-	rm -rf $(OBJDIR) $(BINDIR) output*.out
+	    rm -rf $(OBJDIR) $(BINDIR) output*.out
 
 # Regra para rodar
 run: all
-	./$(BINDIR)/$(TARGET)
+	    ./$(BINDIR)/$(TARGET)
 
 # Regra para rodar com valgrind (detecção de memory leaks)
 valgrind: all
-	valgrind --leak-check=full --show-leak-kinds=all ./$(BINDIR)/$(TARGET)
+	    valgrind --leak-check=full --show-leak-kinds=all ./$(BINDIR)/$(TARGET)
 
 .PHONY: all clean run valgrind directories
