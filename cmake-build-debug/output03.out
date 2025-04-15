@@ -1,0 +1,76 @@
+===== Process Instructions =====
+Program 0: [-2, 202, 1, -3]
+Program 1: [203, 204, 3]
+Program 2: [-2, 2, 3]
+Program 3: [2, 4, 5]
+Program 4: []
+=================================
+time inst	proc1	proc2	proc3	proc4	proc5	proc6	proc7	proc8	proc9	proc10	proc11	proc12	proc13	proc14	proc15	proc16	proc17	proc18	proc19	proc20
+PID: 1, STATE: NEW, TIS: 0
+1       	NEW     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
+PID: 1, STATE: NEW, TIS: 1
+2       	RUN     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
+Executing PID 1: PC=0, Inst=-2, Quantum=3
+PID: 1, PC: 0, inst: -2, BLOCK: 5
+3       	BLOCKED 	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
+4       	BLOCKED 	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
+5       	RUN     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
+Executing PID 1: PC=1, Inst=202, Quantum=3
+PID: 1, PC: 1, inst: 202, EXEC: 2
+Process 1: Running with Q=3
+6       	RUN     	NEW     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
+PID: 2, STATE: NEW, TIS: 0
+Executing PID 1: PC=2, Inst=1, Quantum=2
+PID: 1, PC: 2, inst: 1, MISC
+Process 1: Running with Q=2
+7       	RUN     	NEW     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
+PID: 2, STATE: NEW, TIS: 1
+Executing PID 1: PC=3, Inst=-3, Quantum=1
+PID: 1, PC: 3, inst: -3, BLOCK: 11
+8       	BLOCKED 	RUN     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
+Executing PID 2: PC=0, Inst=203, Quantum=3
+PID: 2, PC: 0, inst: 203, EXEC: 3
+Process 2: Running with Q=3
+9       	BLOCKED 	RUN     	NEW     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
+PID: 3, STATE: NEW, TIS: 0
+Executing PID 2: PC=1, Inst=204, Quantum=2
+PID: 2, PC: 1, inst: 204, EXEC: 4
+Process 2: Running with Q=2
+10      	BLOCKED 	RUN     	NEW     	NEW     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
+PID: 3, STATE: NEW, TIS: 1
+PID: 4, STATE: NEW, TIS: 0
+Executing PID 2: PC=2, Inst=3, Quantum=1
+PID: 2, PC: 2, inst: 3, MISC
+Process 2: Running with Q=1
+11      	READY   	EXIT    	RUN     	NEW     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
+PID: 4, STATE: NEW, TIS: 1
+Executing PID 3: PC=0, Inst=-2, Quantum=3
+PID: 3, PC: 0, inst: -2, BLOCK: 14
+12      	RUN     	        	BLOCKED 	READY   	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
+Executing PID 1: PC=4, Inst=1146051659, Quantum=3
+Error: Invalid process or PC. PID: 1, PC: 4, inst: 1146051659
+13      	EXIT    	        	BLOCKED 	RUN     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
+Executing PID 4: PC=0, Inst=2, Quantum=3
+PID: 4, PC: 0, inst: 2, MISC
+Process 4: Running with Q=3
+14      	        	        	READY   	RUN     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
+Executing PID 4: PC=1, Inst=4, Quantum=2
+PID: 4, PC: 1, inst: 4, MISC
+Process 4: Running with Q=2
+15      	        	        	READY   	RUN     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
+Executing PID 4: PC=2, Inst=5, Quantum=1
+PID: 4, PC: 2, inst: 5, MISC
+Process 4: Running with Q=1
+16      	        	        	RUN     	EXIT    	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
+Executing PID 3: PC=1, Inst=2, Quantum=3
+PID: 3, PC: 1, inst: 2, MISC
+Process 3: Running with Q=3
+17      	        	        	RUN     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
+Executing PID 3: PC=2, Inst=3, Quantum=2
+PID: 3, PC: 2, inst: 3, MISC
+Process 3: Running with Q=2
+18      	        	        	RUN     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
+Executing PID 3: PC=3, Inst=0, Quantum=1
+PID 3, count: 3, Inst: 0, HALTing
+19      	        	        	EXIT    	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
+20      	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        

@@ -3,15 +3,199 @@ Program 0: [202, 201, 102, 4]
 Program 1: []
 Program 2: [-471, -280, 6, 666, 10]
 Program 3: [-149, 428, 84, 610, 748, -84, -413, 539, -253, 628, -101]
-Program 4: [-73, -323, 341, -192, 441, -59, 479, 737, -19, 326, -46, 238331856, -1, 238329328]
+Program 4: [-73, -323, 341, -192, 441, -59, 479, 737, -19, 326, -46, 145139952, -1, 145137424]
 =================================
 time inst	proc1	proc2	proc3	proc4	proc5	proc6	proc7	proc8	proc9	proc10	proc11	proc12	proc13	proc14	proc15	proc16	proc17	proc18	proc19	proc20
-1       	NEW     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
 PID: 1, STATE: NEW, TIS: 0
-2       	NEW     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
+1       	NEW     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
 PID: 1, STATE: NEW, TIS: 1
-3       	RUN     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
-Executing PID 1: PC=0, Inst=1217291072, Quantum=3
-Error: Invalid process or PC. PID: 1, PC: 0, inst: 1217291072
-4       	EXIT    	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
-5       	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
+2       	RUN     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
+Executing PID 1: PC=0, Inst=202, Quantum=3
+PID: 1, PC: 0, inst: 202, EXEC: 2
+Process 1: Running with Q=3
+3       	RUN     	NEW     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
+PID: 2, STATE: NEW, TIS: 0
+Executing PID 1: PC=1, Inst=201, Quantum=2
+PID: 1, PC: 1, inst: 201, EXEC: 1
+Process 1: Running with Q=2
+4       	RUN     	NEW     	NEW     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
+PID: 2, STATE: NEW, TIS: 1
+PID: 3, STATE: NEW, TIS: 0
+Executing PID 1: PC=2, Inst=102, Quantum=1
+PID: 1, PC: 2, inst: 102, JUMP: 2
+Process 1: Running with Q=1
+5       	EXIT    	RUN     	NEW     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
+PID: 3, STATE: NEW, TIS: 1
+Executing PID 2: PC=0, Inst=-683600736, Quantum=3
+Error: Invalid process or PC. PID: 2, PC: 0, inst: -683600736
+6       	        	EXIT    	RUN     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
+Executing PID 3: PC=0, Inst=202, Quantum=3
+PID: 3, PC: 0, inst: 202, EXEC: 2
+Process 3: Running with Q=3
+7       	        	        	RUN     	NEW     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
+PID: 4, STATE: NEW, TIS: 0
+Executing PID 3: PC=1, Inst=201, Quantum=2
+PID: 3, PC: 1, inst: 201, EXEC: 1
+Process 3: Running with Q=2
+8       	        	        	RUN     	NEW     	NEW     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
+PID: 4, STATE: NEW, TIS: 1
+PID: 5, STATE: NEW, TIS: 0
+Executing PID 3: PC=2, Inst=102, Quantum=1
+PID: 3, PC: 2, inst: 102, JUMP: 2
+Process 3: Running with Q=1
+9       	        	        	EXIT    	RUN     	NEW     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
+PID: 5, STATE: NEW, TIS: 1
+Executing PID 4: PC=0, Inst=-683600736, Quantum=3
+Error: Invalid process or PC. PID: 4, PC: 0, inst: -683600736
+10      	        	        	        	EXIT    	RUN     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
+Executing PID 5: PC=0, Inst=202, Quantum=3
+PID: 5, PC: 0, inst: 202, EXEC: 2
+Process 5: Running with Q=3
+11      	        	        	        	        	RUN     	NEW     	        	        	        	        	        	        	        	        	        	        	        	        	        	        
+PID: 6, STATE: NEW, TIS: 0
+Executing PID 5: PC=1, Inst=201, Quantum=2
+PID: 5, PC: 1, inst: 201, EXEC: 1
+Process 5: Running with Q=2
+12      	        	        	        	        	RUN     	NEW     	NEW     	        	        	        	        	        	        	        	        	        	        	        	        	        
+PID: 6, STATE: NEW, TIS: 1
+PID: 7, STATE: NEW, TIS: 0
+Executing PID 5: PC=2, Inst=102, Quantum=1
+PID: 5, PC: 2, inst: 102, JUMP: 2
+Process 5: Running with Q=1
+13      	        	        	        	        	EXIT    	RUN     	NEW     	        	        	        	        	        	        	        	        	        	        	        	        	        
+PID: 7, STATE: NEW, TIS: 1
+Executing PID 6: PC=0, Inst=-683600736, Quantum=3
+Error: Invalid process or PC. PID: 6, PC: 0, inst: -683600736
+14      	        	        	        	        	        	EXIT    	RUN     	        	        	        	        	        	        	        	        	        	        	        	        	        
+Executing PID 7: PC=0, Inst=202, Quantum=3
+PID: 7, PC: 0, inst: 202, EXEC: 2
+Process 7: Running with Q=3
+15      	        	        	        	        	        	        	RUN     	NEW     	        	        	        	        	        	        	        	        	        	        	        	        
+PID: 8, STATE: NEW, TIS: 0
+Executing PID 7: PC=1, Inst=201, Quantum=2
+PID: 7, PC: 1, inst: 201, EXEC: 1
+Process 7: Running with Q=2
+16      	        	        	        	        	        	        	RUN     	NEW     	NEW     	        	        	        	        	        	        	        	        	        	        	        
+PID: 8, STATE: NEW, TIS: 1
+PID: 9, STATE: NEW, TIS: 0
+Executing PID 7: PC=2, Inst=102, Quantum=1
+PID: 7, PC: 2, inst: 102, JUMP: 2
+Process 7: Running with Q=1
+17      	        	        	        	        	        	        	EXIT    	RUN     	NEW     	        	        	        	        	        	        	        	        	        	        	        
+PID: 9, STATE: NEW, TIS: 1
+Executing PID 8: PC=0, Inst=-683600736, Quantum=3
+Error: Invalid process or PC. PID: 8, PC: 0, inst: -683600736
+18      	        	        	        	        	        	        	        	EXIT    	RUN     	        	        	        	        	        	        	        	        	        	        	        
+Executing PID 9: PC=0, Inst=202, Quantum=3
+PID: 9, PC: 0, inst: 202, EXEC: 2
+Process 9: Running with Q=3
+19      	        	        	        	        	        	        	        	        	RUN     	NEW     	        	        	        	        	        	        	        	        	        	        
+PID: 10, STATE: NEW, TIS: 0
+Executing PID 9: PC=1, Inst=201, Quantum=2
+PID: 9, PC: 1, inst: 201, EXEC: 1
+Process 9: Running with Q=2
+20      	        	        	        	        	        	        	        	        	RUN     	NEW     	NEW     	        	        	        	        	        	        	        	        	        
+PID: 10, STATE: NEW, TIS: 1
+PID: 11, STATE: NEW, TIS: 0
+Executing PID 9: PC=2, Inst=102, Quantum=1
+PID: 9, PC: 2, inst: 102, JUMP: 2
+Process 9: Running with Q=1
+21      	        	        	        	        	        	        	        	        	EXIT    	RUN     	NEW     	        	        	        	        	        	        	        	        	        
+PID: 11, STATE: NEW, TIS: 1
+Executing PID 10: PC=0, Inst=-683600736, Quantum=3
+Error: Invalid process or PC. PID: 10, PC: 0, inst: -683600736
+22      	        	        	        	        	        	        	        	        	        	EXIT    	RUN     	        	        	        	        	        	        	        	        	        
+Executing PID 11: PC=0, Inst=202, Quantum=3
+PID: 11, PC: 0, inst: 202, EXEC: 2
+Process 11: Running with Q=3
+23      	        	        	        	        	        	        	        	        	        	        	RUN     	NEW     	        	        	        	        	        	        	        	        
+PID: 12, STATE: NEW, TIS: 0
+Executing PID 11: PC=1, Inst=201, Quantum=2
+PID: 11, PC: 1, inst: 201, EXEC: 1
+Process 11: Running with Q=2
+24      	        	        	        	        	        	        	        	        	        	        	RUN     	NEW     	NEW     	        	        	        	        	        	        	        
+PID: 12, STATE: NEW, TIS: 1
+PID: 13, STATE: NEW, TIS: 0
+Executing PID 11: PC=2, Inst=102, Quantum=1
+PID: 11, PC: 2, inst: 102, JUMP: 2
+Process 11: Running with Q=1
+25      	        	        	        	        	        	        	        	        	        	        	EXIT    	RUN     	NEW     	        	        	        	        	        	        	        
+PID: 13, STATE: NEW, TIS: 1
+Executing PID 12: PC=0, Inst=-683600736, Quantum=3
+Error: Invalid process or PC. PID: 12, PC: 0, inst: -683600736
+26      	        	        	        	        	        	        	        	        	        	        	        	EXIT    	RUN     	        	        	        	        	        	        	        
+Executing PID 13: PC=0, Inst=202, Quantum=3
+PID: 13, PC: 0, inst: 202, EXEC: 2
+Process 13: Running with Q=3
+27      	        	        	        	        	        	        	        	        	        	        	        	        	RUN     	NEW     	        	        	        	        	        	        
+PID: 14, STATE: NEW, TIS: 0
+Executing PID 13: PC=1, Inst=201, Quantum=2
+PID: 13, PC: 1, inst: 201, EXEC: 1
+Process 13: Running with Q=2
+28      	        	        	        	        	        	        	        	        	        	        	        	        	RUN     	NEW     	NEW     	        	        	        	        	        
+PID: 14, STATE: NEW, TIS: 1
+PID: 15, STATE: NEW, TIS: 0
+Executing PID 13: PC=2, Inst=102, Quantum=1
+PID: 13, PC: 2, inst: 102, JUMP: 2
+Process 13: Running with Q=1
+29      	        	        	        	        	        	        	        	        	        	        	        	        	EXIT    	RUN     	NEW     	        	        	        	        	        
+PID: 15, STATE: NEW, TIS: 1
+Executing PID 14: PC=0, Inst=-683600736, Quantum=3
+Error: Invalid process or PC. PID: 14, PC: 0, inst: -683600736
+30      	        	        	        	        	        	        	        	        	        	        	        	        	        	EXIT    	RUN     	        	        	        	        	        
+Executing PID 15: PC=0, Inst=202, Quantum=3
+PID: 15, PC: 0, inst: 202, EXEC: 2
+Process 15: Running with Q=3
+31      	        	        	        	        	        	        	        	        	        	        	        	        	        	        	RUN     	NEW     	        	        	        	        
+PID: 16, STATE: NEW, TIS: 0
+Executing PID 15: PC=1, Inst=201, Quantum=2
+PID: 15, PC: 1, inst: 201, EXEC: 1
+Process 15: Running with Q=2
+32      	        	        	        	        	        	        	        	        	        	        	        	        	        	        	RUN     	NEW     	NEW     	        	        	        
+PID: 16, STATE: NEW, TIS: 1
+PID: 17, STATE: NEW, TIS: 0
+Executing PID 15: PC=2, Inst=102, Quantum=1
+PID: 15, PC: 2, inst: 102, JUMP: 2
+Process 15: Running with Q=1
+33      	        	        	        	        	        	        	        	        	        	        	        	        	        	        	EXIT    	RUN     	NEW     	        	        	        
+PID: 17, STATE: NEW, TIS: 1
+Executing PID 16: PC=0, Inst=-683600736, Quantum=3
+Error: Invalid process or PC. PID: 16, PC: 0, inst: -683600736
+34      	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	EXIT    	RUN     	        	        	        
+Executing PID 17: PC=0, Inst=202, Quantum=3
+PID: 17, PC: 0, inst: 202, EXEC: 2
+Process 17: Running with Q=3
+35      	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	RUN     	NEW     	        	        
+PID: 18, STATE: NEW, TIS: 0
+Executing PID 17: PC=1, Inst=201, Quantum=2
+PID: 17, PC: 1, inst: 201, EXEC: 1
+Process 17: Running with Q=2
+36      	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	RUN     	NEW     	NEW     	        
+PID: 18, STATE: NEW, TIS: 1
+PID: 19, STATE: NEW, TIS: 0
+Executing PID 17: PC=2, Inst=102, Quantum=1
+PID: 17, PC: 2, inst: 102, JUMP: 2
+Process 17: Running with Q=1
+37      	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	EXIT    	RUN     	NEW     	        
+PID: 19, STATE: NEW, TIS: 1
+Executing PID 18: PC=0, Inst=-683600736, Quantum=3
+Error: Invalid process or PC. PID: 18, PC: 0, inst: -683600736
+38      	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	EXIT    	RUN     	        
+Executing PID 19: PC=0, Inst=202, Quantum=3
+PID: 19, PC: 0, inst: 202, EXEC: 2
+Process 19: Running with Q=3
+39      	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	RUN     	NEW     
+PID: 20, STATE: NEW, TIS: 0
+Executing PID 19: PC=1, Inst=201, Quantum=2
+PID: 19, PC: 1, inst: 201, EXEC: 1
+Process 19: Running with Q=2
+40      	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	RUN     	NEW     
+PID: 20, STATE: NEW, TIS: 1
+Executing PID 19: PC=2, Inst=102, Quantum=1
+PID: 19, PC: 2, inst: 102, JUMP: 2
+Process 19: Running with Q=1
+41      	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	EXIT    	RUN     
+Executing PID 20: PC=0, Inst=-683600736, Quantum=3
+Error: Invalid process or PC. PID: 20, PC: 0, inst: -683600736
+42      	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	EXIT    
+43      	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        

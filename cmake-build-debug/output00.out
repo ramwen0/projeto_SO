@@ -6,248 +6,251 @@ Program 3: []
 Program 4: []
 =================================
 time inst	proc1	proc2	proc3	proc4	proc5	proc6	proc7	proc8	proc9	proc10	proc11	proc12	proc13	proc14	proc15	proc16	proc17	proc18	proc19	proc20
-1       	NEW     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
 PID: 1, STATE: NEW, TIS: 0
-2       	NEW     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
+1       	NEW     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
 PID: 1, STATE: NEW, TIS: 1
-3       	RUN     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
+2       	RUN     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
 Executing PID 1: PC=0, Inst=203, Quantum=3
 PID: 1, PC: 0, inst: 203, EXEC: 3
 Process 1: Running with Q=3
-4       	RUN     	NEW     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
+3       	RUN     	NEW     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
 PID: 2, STATE: NEW, TIS: 0
 Executing PID 1: PC=1, Inst=1, Quantum=2
 PID: 1, PC: 1, inst: 1, MISC
 Process 1: Running with Q=2
-5       	RUN     	NEW     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
+4       	RUN     	NEW     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
 PID: 2, STATE: NEW, TIS: 1
 Executing PID 1: PC=2, Inst=-2, Quantum=1
-PID: 1, PC: 2, inst: -2, BLOCK: 8
-6       	BLOCKED 	RUN     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
+PID: 1, PC: 2, inst: -2, BLOCK: 7
+5       	BLOCKED 	RUN     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
 Executing PID 2: PC=0, Inst=2, Quantum=3
 PID: 2, PC: 0, inst: 2, MISC
 Process 2: Running with Q=3
-7       	BLOCKED 	RUN     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
+6       	BLOCKED 	RUN     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
 Executing PID 2: PC=1, Inst=202, Quantum=2
 PID: 2, PC: 1, inst: 202, EXEC: 2
 Process 2: Running with Q=2
-8       	READY   	RUN     	NEW     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
+7       	READY   	RUN     	NEW     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
 PID: 3, STATE: NEW, TIS: 0
 Executing PID 2: PC=2, Inst=5, Quantum=1
 PID: 2, PC: 2, inst: 5, MISC
 Process 2: Running with Q=1
-9       	RUN     	EXIT    	NEW     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
+8       	RUN     	EXIT    	NEW     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
 PID: 3, STATE: NEW, TIS: 1
 Executing PID 1: PC=3, Inst=1, Quantum=3
 PID: 1, PC: 3, inst: 1, MISC
 Process 1: Running with Q=3
-10      	RUN     	        	READY   	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
+9       	RUN     	        	READY   	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
 Executing PID 1: PC=4, Inst=977484654, Quantum=2
 Error: Invalid process or PC. PID: 1, PC: 4, inst: 977484654
-11      	EXIT    	        	RUN     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
+10      	EXIT    	        	RUN     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
 Executing PID 3: PC=0, Inst=4, Quantum=3
 PID: 3, PC: 0, inst: 4, MISC
 Process 3: Running with Q=3
-12      	        	        	RUN     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
+11      	        	        	RUN     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
 Executing PID 3: PC=1, Inst=-3, Quantum=2
-PID: 3, PC: 1, inst: -3, BLOCK: 16
+PID: 3, PC: 1, inst: -3, BLOCK: 15
+12      	        	        	BLOCKED 	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
 13      	        	        	BLOCKED 	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
 14      	        	        	BLOCKED 	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
-15      	        	        	BLOCKED 	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
-16      	        	        	RUN     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
+15      	        	        	RUN     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
 Executing PID 3: PC=2, Inst=102, Quantum=3
 PID: 3, PC: 2, inst: 102, JUMP: 2
 Process 3: Running with Q=3
-17      	        	        	RUN     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
+16      	        	        	RUN     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
 Executing PID 3: PC=0, Inst=4, Quantum=2
 PID: 3, PC: 0, inst: 4, MISC
 Process 3: Running with Q=2
-18      	        	        	RUN     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
+17      	        	        	RUN     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
 Executing PID 3: PC=1, Inst=-3, Quantum=1
-PID: 3, PC: 1, inst: -3, BLOCK: 22
+PID: 3, PC: 1, inst: -3, BLOCK: 21
+18      	        	        	BLOCKED 	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
 19      	        	        	BLOCKED 	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
 20      	        	        	BLOCKED 	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
-21      	        	        	BLOCKED 	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
-22      	        	        	RUN     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
+21      	        	        	RUN     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
 Executing PID 3: PC=2, Inst=102, Quantum=3
 PID: 3, PC: 2, inst: 102, JUMP: 2
 Process 3: Running with Q=3
-23      	        	        	RUN     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
+22      	        	        	RUN     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
 Executing PID 3: PC=0, Inst=4, Quantum=2
 PID: 3, PC: 0, inst: 4, MISC
 Process 3: Running with Q=2
-24      	        	        	RUN     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
+23      	        	        	RUN     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
 Executing PID 3: PC=1, Inst=-3, Quantum=1
-PID: 3, PC: 1, inst: -3, BLOCK: 28
+PID: 3, PC: 1, inst: -3, BLOCK: 27
+24      	        	        	BLOCKED 	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
 25      	        	        	BLOCKED 	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
 26      	        	        	BLOCKED 	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
-27      	        	        	BLOCKED 	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
-28      	        	        	RUN     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
+27      	        	        	RUN     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
 Executing PID 3: PC=2, Inst=102, Quantum=3
 PID: 3, PC: 2, inst: 102, JUMP: 2
 Process 3: Running with Q=3
-29      	        	        	RUN     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
+28      	        	        	RUN     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
 Executing PID 3: PC=0, Inst=4, Quantum=2
 PID: 3, PC: 0, inst: 4, MISC
 Process 3: Running with Q=2
-30      	        	        	RUN     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
+29      	        	        	RUN     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
 Executing PID 3: PC=1, Inst=-3, Quantum=1
-PID: 3, PC: 1, inst: -3, BLOCK: 34
+PID: 3, PC: 1, inst: -3, BLOCK: 33
+30      	        	        	BLOCKED 	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
 31      	        	        	BLOCKED 	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
 32      	        	        	BLOCKED 	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
-33      	        	        	BLOCKED 	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
-34      	        	        	RUN     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
+33      	        	        	RUN     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
 Executing PID 3: PC=2, Inst=102, Quantum=3
 PID: 3, PC: 2, inst: 102, JUMP: 2
 Process 3: Running with Q=3
-35      	        	        	RUN     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
+34      	        	        	RUN     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
 Executing PID 3: PC=0, Inst=4, Quantum=2
 PID: 3, PC: 0, inst: 4, MISC
 Process 3: Running with Q=2
-36      	        	        	RUN     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
+35      	        	        	RUN     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
 Executing PID 3: PC=1, Inst=-3, Quantum=1
-PID: 3, PC: 1, inst: -3, BLOCK: 40
+PID: 3, PC: 1, inst: -3, BLOCK: 39
+36      	        	        	BLOCKED 	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
 37      	        	        	BLOCKED 	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
 38      	        	        	BLOCKED 	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
-39      	        	        	BLOCKED 	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
-40      	        	        	RUN     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
+39      	        	        	RUN     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
 Executing PID 3: PC=2, Inst=102, Quantum=3
 PID: 3, PC: 2, inst: 102, JUMP: 2
 Process 3: Running with Q=3
-41      	        	        	RUN     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
+40      	        	        	RUN     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
 Executing PID 3: PC=0, Inst=4, Quantum=2
 PID: 3, PC: 0, inst: 4, MISC
 Process 3: Running with Q=2
-42      	        	        	RUN     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
+41      	        	        	RUN     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
 Executing PID 3: PC=1, Inst=-3, Quantum=1
-PID: 3, PC: 1, inst: -3, BLOCK: 46
+PID: 3, PC: 1, inst: -3, BLOCK: 45
+42      	        	        	BLOCKED 	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
 43      	        	        	BLOCKED 	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
 44      	        	        	BLOCKED 	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
-45      	        	        	BLOCKED 	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
-46      	        	        	RUN     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
+45      	        	        	RUN     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
 Executing PID 3: PC=2, Inst=102, Quantum=3
 PID: 3, PC: 2, inst: 102, JUMP: 2
 Process 3: Running with Q=3
-47      	        	        	RUN     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
+46      	        	        	RUN     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
 Executing PID 3: PC=0, Inst=4, Quantum=2
 PID: 3, PC: 0, inst: 4, MISC
 Process 3: Running with Q=2
-48      	        	        	RUN     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
+47      	        	        	RUN     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
 Executing PID 3: PC=1, Inst=-3, Quantum=1
-PID: 3, PC: 1, inst: -3, BLOCK: 52
+PID: 3, PC: 1, inst: -3, BLOCK: 51
+48      	        	        	BLOCKED 	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
 49      	        	        	BLOCKED 	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
 50      	        	        	BLOCKED 	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
-51      	        	        	BLOCKED 	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
-52      	        	        	RUN     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
+51      	        	        	RUN     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
 Executing PID 3: PC=2, Inst=102, Quantum=3
 PID: 3, PC: 2, inst: 102, JUMP: 2
 Process 3: Running with Q=3
-53      	        	        	RUN     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
+52      	        	        	RUN     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
 Executing PID 3: PC=0, Inst=4, Quantum=2
 PID: 3, PC: 0, inst: 4, MISC
 Process 3: Running with Q=2
-54      	        	        	RUN     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
+53      	        	        	RUN     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
 Executing PID 3: PC=1, Inst=-3, Quantum=1
-PID: 3, PC: 1, inst: -3, BLOCK: 58
+PID: 3, PC: 1, inst: -3, BLOCK: 57
+54      	        	        	BLOCKED 	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
 55      	        	        	BLOCKED 	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
 56      	        	        	BLOCKED 	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
-57      	        	        	BLOCKED 	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
-58      	        	        	RUN     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
+57      	        	        	RUN     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
 Executing PID 3: PC=2, Inst=102, Quantum=3
 PID: 3, PC: 2, inst: 102, JUMP: 2
 Process 3: Running with Q=3
-59      	        	        	RUN     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
+58      	        	        	RUN     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
 Executing PID 3: PC=0, Inst=4, Quantum=2
 PID: 3, PC: 0, inst: 4, MISC
 Process 3: Running with Q=2
-60      	        	        	RUN     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
+59      	        	        	RUN     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
 Executing PID 3: PC=1, Inst=-3, Quantum=1
-PID: 3, PC: 1, inst: -3, BLOCK: 64
+PID: 3, PC: 1, inst: -3, BLOCK: 63
+60      	        	        	BLOCKED 	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
 61      	        	        	BLOCKED 	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
 62      	        	        	BLOCKED 	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
-63      	        	        	BLOCKED 	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
-64      	        	        	RUN     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
+63      	        	        	RUN     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
 Executing PID 3: PC=2, Inst=102, Quantum=3
 PID: 3, PC: 2, inst: 102, JUMP: 2
 Process 3: Running with Q=3
-65      	        	        	RUN     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
+64      	        	        	RUN     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
 Executing PID 3: PC=0, Inst=4, Quantum=2
 PID: 3, PC: 0, inst: 4, MISC
 Process 3: Running with Q=2
-66      	        	        	RUN     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
+65      	        	        	RUN     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
 Executing PID 3: PC=1, Inst=-3, Quantum=1
-PID: 3, PC: 1, inst: -3, BLOCK: 70
+PID: 3, PC: 1, inst: -3, BLOCK: 69
+66      	        	        	BLOCKED 	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
 67      	        	        	BLOCKED 	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
 68      	        	        	BLOCKED 	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
-69      	        	        	BLOCKED 	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
-70      	        	        	RUN     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
+69      	        	        	RUN     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
 Executing PID 3: PC=2, Inst=102, Quantum=3
 PID: 3, PC: 2, inst: 102, JUMP: 2
 Process 3: Running with Q=3
-71      	        	        	RUN     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
+70      	        	        	RUN     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
 Executing PID 3: PC=0, Inst=4, Quantum=2
 PID: 3, PC: 0, inst: 4, MISC
 Process 3: Running with Q=2
-72      	        	        	RUN     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
+71      	        	        	RUN     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
 Executing PID 3: PC=1, Inst=-3, Quantum=1
-PID: 3, PC: 1, inst: -3, BLOCK: 76
+PID: 3, PC: 1, inst: -3, BLOCK: 75
+72      	        	        	BLOCKED 	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
 73      	        	        	BLOCKED 	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
 74      	        	        	BLOCKED 	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
-75      	        	        	BLOCKED 	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
-76      	        	        	RUN     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
+75      	        	        	RUN     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
 Executing PID 3: PC=2, Inst=102, Quantum=3
 PID: 3, PC: 2, inst: 102, JUMP: 2
 Process 3: Running with Q=3
-77      	        	        	RUN     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
+76      	        	        	RUN     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
 Executing PID 3: PC=0, Inst=4, Quantum=2
 PID: 3, PC: 0, inst: 4, MISC
 Process 3: Running with Q=2
-78      	        	        	RUN     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
+77      	        	        	RUN     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
 Executing PID 3: PC=1, Inst=-3, Quantum=1
-PID: 3, PC: 1, inst: -3, BLOCK: 82
+PID: 3, PC: 1, inst: -3, BLOCK: 81
+78      	        	        	BLOCKED 	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
 79      	        	        	BLOCKED 	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
 80      	        	        	BLOCKED 	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
-81      	        	        	BLOCKED 	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
-82      	        	        	RUN     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
+81      	        	        	RUN     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
 Executing PID 3: PC=2, Inst=102, Quantum=3
 PID: 3, PC: 2, inst: 102, JUMP: 2
 Process 3: Running with Q=3
-83      	        	        	RUN     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
+82      	        	        	RUN     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
 Executing PID 3: PC=0, Inst=4, Quantum=2
 PID: 3, PC: 0, inst: 4, MISC
 Process 3: Running with Q=2
-84      	        	        	RUN     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
+83      	        	        	RUN     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
 Executing PID 3: PC=1, Inst=-3, Quantum=1
-PID: 3, PC: 1, inst: -3, BLOCK: 88
+PID: 3, PC: 1, inst: -3, BLOCK: 87
+84      	        	        	BLOCKED 	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
 85      	        	        	BLOCKED 	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
 86      	        	        	BLOCKED 	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
-87      	        	        	BLOCKED 	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
-88      	        	        	RUN     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
+87      	        	        	RUN     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
 Executing PID 3: PC=2, Inst=102, Quantum=3
 PID: 3, PC: 2, inst: 102, JUMP: 2
 Process 3: Running with Q=3
-89      	        	        	RUN     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
+88      	        	        	RUN     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
 Executing PID 3: PC=0, Inst=4, Quantum=2
 PID: 3, PC: 0, inst: 4, MISC
 Process 3: Running with Q=2
-90      	        	        	RUN     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
+89      	        	        	RUN     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
 Executing PID 3: PC=1, Inst=-3, Quantum=1
-PID: 3, PC: 1, inst: -3, BLOCK: 94
+PID: 3, PC: 1, inst: -3, BLOCK: 93
+90      	        	        	BLOCKED 	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
 91      	        	        	BLOCKED 	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
 92      	        	        	BLOCKED 	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
-93      	        	        	BLOCKED 	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
-94      	        	        	RUN     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
+93      	        	        	RUN     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
 Executing PID 3: PC=2, Inst=102, Quantum=3
 PID: 3, PC: 2, inst: 102, JUMP: 2
 Process 3: Running with Q=3
-95      	        	        	RUN     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
+94      	        	        	RUN     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
 Executing PID 3: PC=0, Inst=4, Quantum=2
 PID: 3, PC: 0, inst: 4, MISC
 Process 3: Running with Q=2
-96      	        	        	RUN     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
+95      	        	        	RUN     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
 Executing PID 3: PC=1, Inst=-3, Quantum=1
-PID: 3, PC: 1, inst: -3, BLOCK: 100
+PID: 3, PC: 1, inst: -3, BLOCK: 99
+96      	        	        	BLOCKED 	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
 97      	        	        	BLOCKED 	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
 98      	        	        	BLOCKED 	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
-99      	        	        	BLOCKED 	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
+99      	        	        	RUN     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
+Executing PID 3: PC=2, Inst=102, Quantum=3
+PID: 3, PC: 2, inst: 102, JUMP: 2
+Process 3: Running with Q=3
 100     	        	        	RUN     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        

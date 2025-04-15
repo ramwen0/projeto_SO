@@ -6,393 +6,396 @@ Program 3: []
 Program 4: []
 =================================
 time inst	proc1	proc2	proc3	proc4	proc5	proc6	proc7	proc8	proc9	proc10	proc11	proc12	proc13	proc14	proc15	proc16	proc17	proc18	proc19	proc20
-1       	NEW     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
 PID: 1, STATE: NEW, TIS: 0
-2       	NEW     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
+1       	NEW     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
 PID: 1, STATE: NEW, TIS: 1
-3       	RUN     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
+2       	RUN     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
 Executing PID 1: PC=0, Inst=300, Quantum=3
 PID: 1, PC: 0, inst: 300, MISC
 Process 1: Running with Q=3
-4       	RUN     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
+3       	RUN     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
 Executing PID 1: PC=1, Inst=201, Quantum=2
 PID: 1, PC: 1, inst: 201, EXEC: 1
 Process 1: Running with Q=2
-5       	RUN     	NEW     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
+4       	RUN     	NEW     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
 PID: 2, STATE: NEW, TIS: 0
 Executing PID 1: PC=2, Inst=-2, Quantum=1
-PID: 1, PC: 2, inst: -2, BLOCK: 8
-6       	BLOCKED 	NEW     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
+PID: 1, PC: 2, inst: -2, BLOCK: 7
+5       	BLOCKED 	NEW     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
 PID: 2, STATE: NEW, TIS: 1
-7       	BLOCKED 	RUN     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
+6       	BLOCKED 	RUN     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
 Executing PID 2: PC=0, Inst=300, Quantum=3
 PID: 2, PC: 0, inst: 300, MISC
 Process 2: Running with Q=3
-8       	READY   	RUN     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
+7       	READY   	RUN     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
 Executing PID 2: PC=1, Inst=201, Quantum=2
 PID: 2, PC: 1, inst: 201, EXEC: 1
 Process 2: Running with Q=2
-9       	READY   	RUN     	NEW     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
+8       	READY   	RUN     	NEW     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
 PID: 3, STATE: NEW, TIS: 0
 Executing PID 2: PC=2, Inst=-2, Quantum=1
-PID: 2, PC: 2, inst: -2, BLOCK: 12
-10      	RUN     	BLOCKED 	NEW     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
+PID: 2, PC: 2, inst: -2, BLOCK: 11
+9       	RUN     	BLOCKED 	NEW     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
 PID: 3, STATE: NEW, TIS: 1
 Executing PID 1: PC=3, Inst=1, Quantum=3
 PID: 1, PC: 3, inst: 1, MISC
 Process 1: Running with Q=3
-11      	RUN     	BLOCKED 	READY   	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
+10      	RUN     	BLOCKED 	READY   	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
 Executing PID 1: PC=4, Inst=977484654, Quantum=2
 Error: Invalid process or PC. PID: 1, PC: 4, inst: 977484654
-12      	EXIT    	READY   	RUN     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
+11      	EXIT    	READY   	RUN     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
 Executing PID 3: PC=0, Inst=300, Quantum=3
 PID: 3, PC: 0, inst: 300, MISC
 Process 3: Running with Q=3
-13      	        	READY   	RUN     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
+12      	        	READY   	RUN     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
 Executing PID 3: PC=1, Inst=201, Quantum=2
 PID: 3, PC: 1, inst: 201, EXEC: 1
 Process 3: Running with Q=2
-14      	        	READY   	RUN     	NEW     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
+13      	        	READY   	RUN     	NEW     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
 PID: 4, STATE: NEW, TIS: 0
 Executing PID 3: PC=2, Inst=-2, Quantum=1
-PID: 3, PC: 2, inst: -2, BLOCK: 17
-15      	        	RUN     	BLOCKED 	NEW     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
+PID: 3, PC: 2, inst: -2, BLOCK: 16
+14      	        	RUN     	BLOCKED 	NEW     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
 PID: 4, STATE: NEW, TIS: 1
 Executing PID 2: PC=3, Inst=1, Quantum=3
 PID: 2, PC: 3, inst: 1, MISC
 Process 2: Running with Q=3
-16      	        	RUN     	BLOCKED 	READY   	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
+15      	        	RUN     	BLOCKED 	READY   	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
 Executing PID 2: PC=4, Inst=0, Quantum=2
 PID 2, count: 4, Inst: 0, HALTing
-17      	        	EXIT    	READY   	RUN     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
+16      	        	EXIT    	READY   	RUN     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
 Executing PID 4: PC=0, Inst=300, Quantum=3
 PID: 4, PC: 0, inst: 300, MISC
 Process 4: Running with Q=3
-18      	        	        	READY   	RUN     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
+17      	        	        	READY   	RUN     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
 Executing PID 4: PC=1, Inst=201, Quantum=2
 PID: 4, PC: 1, inst: 201, EXEC: 1
 Process 4: Running with Q=2
-19      	        	        	READY   	RUN     	NEW     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
+18      	        	        	READY   	RUN     	NEW     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
 PID: 5, STATE: NEW, TIS: 0
 Executing PID 4: PC=2, Inst=-2, Quantum=1
-PID: 4, PC: 2, inst: -2, BLOCK: 22
-20      	        	        	RUN     	BLOCKED 	NEW     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
+PID: 4, PC: 2, inst: -2, BLOCK: 21
+19      	        	        	RUN     	BLOCKED 	NEW     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
 PID: 5, STATE: NEW, TIS: 1
 Executing PID 3: PC=3, Inst=1, Quantum=3
 PID: 3, PC: 3, inst: 1, MISC
 Process 3: Running with Q=3
-21      	        	        	RUN     	BLOCKED 	READY   	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
+20      	        	        	RUN     	BLOCKED 	READY   	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
 Executing PID 3: PC=4, Inst=1247569260, Quantum=2
 Error: Invalid process or PC. PID: 3, PC: 4, inst: 1247569260
-22      	        	        	EXIT    	READY   	RUN     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
+21      	        	        	EXIT    	READY   	RUN     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
 Executing PID 5: PC=0, Inst=300, Quantum=3
 PID: 5, PC: 0, inst: 300, MISC
 Process 5: Running with Q=3
-23      	        	        	        	READY   	RUN     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
+22      	        	        	        	READY   	RUN     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
 Executing PID 5: PC=1, Inst=201, Quantum=2
 PID: 5, PC: 1, inst: 201, EXEC: 1
 Process 5: Running with Q=2
-24      	        	        	        	READY   	RUN     	NEW     	        	        	        	        	        	        	        	        	        	        	        	        	        	        
+23      	        	        	        	READY   	RUN     	NEW     	        	        	        	        	        	        	        	        	        	        	        	        	        	        
 PID: 6, STATE: NEW, TIS: 0
 Executing PID 5: PC=2, Inst=-2, Quantum=1
-PID: 5, PC: 2, inst: -2, BLOCK: 27
-25      	        	        	        	RUN     	BLOCKED 	NEW     	        	        	        	        	        	        	        	        	        	        	        	        	        	        
+PID: 5, PC: 2, inst: -2, BLOCK: 26
+24      	        	        	        	RUN     	BLOCKED 	NEW     	        	        	        	        	        	        	        	        	        	        	        	        	        	        
 PID: 6, STATE: NEW, TIS: 1
 Executing PID 4: PC=3, Inst=1, Quantum=3
 PID: 4, PC: 3, inst: 1, MISC
 Process 4: Running with Q=3
-26      	        	        	        	RUN     	BLOCKED 	READY   	        	        	        	        	        	        	        	        	        	        	        	        	        	        
-Executing PID 4: PC=4, Inst=1869762652, Quantum=2
-Error: Invalid process or PC. PID: 4, PC: 4, inst: 1869762652
-27      	        	        	        	EXIT    	READY   	RUN     	        	        	        	        	        	        	        	        	        	        	        	        	        	        
+25      	        	        	        	RUN     	BLOCKED 	READY   	        	        	        	        	        	        	        	        	        	        	        	        	        	        
+Executing PID 4: PC=4, Inst=1769097057, Quantum=2
+Error: Invalid process or PC. PID: 4, PC: 4, inst: 1769097057
+26      	        	        	        	EXIT    	READY   	RUN     	        	        	        	        	        	        	        	        	        	        	        	        	        	        
 Executing PID 6: PC=0, Inst=300, Quantum=3
 PID: 6, PC: 0, inst: 300, MISC
 Process 6: Running with Q=3
-28      	        	        	        	        	READY   	RUN     	        	        	        	        	        	        	        	        	        	        	        	        	        	        
+27      	        	        	        	        	READY   	RUN     	        	        	        	        	        	        	        	        	        	        	        	        	        	        
 Executing PID 6: PC=1, Inst=201, Quantum=2
 PID: 6, PC: 1, inst: 201, EXEC: 1
 Process 6: Running with Q=2
-29      	        	        	        	        	READY   	RUN     	NEW     	        	        	        	        	        	        	        	        	        	        	        	        	        
+28      	        	        	        	        	READY   	RUN     	NEW     	        	        	        	        	        	        	        	        	        	        	        	        	        
 PID: 7, STATE: NEW, TIS: 0
 Executing PID 6: PC=2, Inst=-2, Quantum=1
-PID: 6, PC: 2, inst: -2, BLOCK: 32
-30      	        	        	        	        	RUN     	BLOCKED 	NEW     	        	        	        	        	        	        	        	        	        	        	        	        	        
+PID: 6, PC: 2, inst: -2, BLOCK: 31
+29      	        	        	        	        	RUN     	BLOCKED 	NEW     	        	        	        	        	        	        	        	        	        	        	        	        	        
 PID: 7, STATE: NEW, TIS: 1
 Executing PID 5: PC=3, Inst=1, Quantum=3
 PID: 5, PC: 3, inst: 1, MISC
 Process 5: Running with Q=3
-31      	        	        	        	        	RUN     	BLOCKED 	READY   	        	        	        	        	        	        	        	        	        	        	        	        	        
-Executing PID 5: PC=4, Inst=1551068777, Quantum=2
-Error: Invalid process or PC. PID: 5, PC: 4, inst: 1551068777
-32      	        	        	        	        	EXIT    	READY   	RUN     	        	        	        	        	        	        	        	        	        	        	        	        	        
+30      	        	        	        	        	RUN     	BLOCKED 	READY   	        	        	        	        	        	        	        	        	        	        	        	        	        
+Executing PID 5: PC=4, Inst=1852397404, Quantum=2
+Error: Invalid process or PC. PID: 5, PC: 4, inst: 1852397404
+31      	        	        	        	        	EXIT    	READY   	RUN     	        	        	        	        	        	        	        	        	        	        	        	        	        
 Executing PID 7: PC=0, Inst=300, Quantum=3
 PID: 7, PC: 0, inst: 300, MISC
 Process 7: Running with Q=3
-33      	        	        	        	        	        	READY   	RUN     	        	        	        	        	        	        	        	        	        	        	        	        	        
+32      	        	        	        	        	        	READY   	RUN     	        	        	        	        	        	        	        	        	        	        	        	        	        
 Executing PID 7: PC=1, Inst=201, Quantum=2
 PID: 7, PC: 1, inst: 201, EXEC: 1
 Process 7: Running with Q=2
-34      	        	        	        	        	        	READY   	RUN     	NEW     	        	        	        	        	        	        	        	        	        	        	        	        
+33      	        	        	        	        	        	READY   	RUN     	NEW     	        	        	        	        	        	        	        	        	        	        	        	        
 PID: 8, STATE: NEW, TIS: 0
 Executing PID 7: PC=2, Inst=-2, Quantum=1
-PID: 7, PC: 2, inst: -2, BLOCK: 37
-35      	        	        	        	        	        	RUN     	BLOCKED 	NEW     	        	        	        	        	        	        	        	        	        	        	        	        
+PID: 7, PC: 2, inst: -2, BLOCK: 36
+34      	        	        	        	        	        	RUN     	BLOCKED 	NEW     	        	        	        	        	        	        	        	        	        	        	        	        
 PID: 8, STATE: NEW, TIS: 1
 Executing PID 6: PC=3, Inst=1, Quantum=3
 PID: 6, PC: 3, inst: 1, MISC
 Process 6: Running with Q=3
-36      	        	        	        	        	        	RUN     	BLOCKED 	READY   	        	        	        	        	        	        	        	        	        	        	        	        
-Executing PID 6: PC=4, Inst=1936026729, Quantum=2
-Error: Invalid process or PC. PID: 6, PC: 4, inst: 1936026729
-37      	        	        	        	        	        	EXIT    	READY   	RUN     	        	        	        	        	        	        	        	        	        	        	        	        
+35      	        	        	        	        	        	RUN     	BLOCKED 	READY   	        	        	        	        	        	        	        	        	        	        	        	        
+Executing PID 6: PC=4, Inst=1635017028, Quantum=2
+Error: Invalid process or PC. PID: 6, PC: 4, inst: 1635017028
+36      	        	        	        	        	        	EXIT    	READY   	RUN     	        	        	        	        	        	        	        	        	        	        	        	        
 Executing PID 8: PC=0, Inst=300, Quantum=3
 PID: 8, PC: 0, inst: 300, MISC
 Process 8: Running with Q=3
-38      	        	        	        	        	        	        	READY   	RUN     	        	        	        	        	        	        	        	        	        	        	        	        
+37      	        	        	        	        	        	        	READY   	RUN     	        	        	        	        	        	        	        	        	        	        	        	        
 Executing PID 8: PC=1, Inst=201, Quantum=2
 PID: 8, PC: 1, inst: 201, EXEC: 1
 Process 8: Running with Q=2
-39      	        	        	        	        	        	        	READY   	RUN     	NEW     	        	        	        	        	        	        	        	        	        	        	        
+38      	        	        	        	        	        	        	READY   	RUN     	NEW     	        	        	        	        	        	        	        	        	        	        	        
 PID: 9, STATE: NEW, TIS: 0
 Executing PID 8: PC=2, Inst=-2, Quantum=1
-PID: 8, PC: 2, inst: -2, BLOCK: 42
-40      	        	        	        	        	        	        	RUN     	BLOCKED 	NEW     	        	        	        	        	        	        	        	        	        	        	        
+PID: 8, PC: 2, inst: -2, BLOCK: 41
+39      	        	        	        	        	        	        	RUN     	BLOCKED 	NEW     	        	        	        	        	        	        	        	        	        	        	        
 PID: 9, STATE: NEW, TIS: 1
 Executing PID 7: PC=3, Inst=1, Quantum=3
 PID: 7, PC: 3, inst: 1, MISC
 Process 7: Running with Q=3
-41      	        	        	        	        	        	        	RUN     	BLOCKED 	READY   	        	        	        	        	        	        	        	        	        	        	        
-Executing PID 7: PC=4, Inst=1767332980, Quantum=2
-Error: Invalid process or PC. PID: 7, PC: 4, inst: 1767332980
-42      	        	        	        	        	        	        	EXIT    	READY   	RUN     	        	        	        	        	        	        	        	        	        	        	        
+40      	        	        	        	        	        	        	RUN     	BLOCKED 	READY   	        	        	        	        	        	        	        	        	        	        	        
+Executing PID 7: PC=4, Inst=1766203501, Quantum=2
+Error: Invalid process or PC. PID: 7, PC: 4, inst: 1766203501
+41      	        	        	        	        	        	        	EXIT    	READY   	RUN     	        	        	        	        	        	        	        	        	        	        	        
 Executing PID 9: PC=0, Inst=300, Quantum=3
 PID: 9, PC: 0, inst: 300, MISC
 Process 9: Running with Q=3
-43      	        	        	        	        	        	        	        	READY   	RUN     	        	        	        	        	        	        	        	        	        	        	        
+42      	        	        	        	        	        	        	        	READY   	RUN     	        	        	        	        	        	        	        	        	        	        	        
 Executing PID 9: PC=1, Inst=201, Quantum=2
 PID: 9, PC: 1, inst: 201, EXEC: 1
 Process 9: Running with Q=2
-44      	        	        	        	        	        	        	        	READY   	RUN     	NEW     	        	        	        	        	        	        	        	        	        	        
+43      	        	        	        	        	        	        	        	READY   	RUN     	NEW     	        	        	        	        	        	        	        	        	        	        
 PID: 10, STATE: NEW, TIS: 0
 Executing PID 9: PC=2, Inst=-2, Quantum=1
-PID: 9, PC: 2, inst: -2, BLOCK: 47
-45      	        	        	        	        	        	        	        	RUN     	BLOCKED 	NEW     	        	        	        	        	        	        	        	        	        	        
+PID: 9, PC: 2, inst: -2, BLOCK: 46
+44      	        	        	        	        	        	        	        	RUN     	BLOCKED 	NEW     	        	        	        	        	        	        	        	        	        	        
 PID: 10, STATE: NEW, TIS: 1
 Executing PID 8: PC=3, Inst=1, Quantum=3
 PID: 8, PC: 3, inst: 1, MISC
 Process 8: Running with Q=3
-46      	        	        	        	        	        	        	        	RUN     	BLOCKED 	READY   	        	        	        	        	        	        	        	        	        	        
-Executing PID 8: PC=4, Inst=1769097057, Quantum=2
-Error: Invalid process or PC. PID: 8, PC: 4, inst: 1769097057
-47      	        	        	        	        	        	        	        	EXIT    	READY   	RUN     	        	        	        	        	        	        	        	        	        	        
+45      	        	        	        	        	        	        	        	RUN     	BLOCKED 	READY   	        	        	        	        	        	        	        	        	        	        
+Executing PID 8: PC=4, Inst=1869762652, Quantum=2
+Error: Invalid process or PC. PID: 8, PC: 4, inst: 1869762652
+46      	        	        	        	        	        	        	        	EXIT    	READY   	RUN     	        	        	        	        	        	        	        	        	        	        
 Executing PID 10: PC=0, Inst=300, Quantum=3
 PID: 10, PC: 0, inst: 300, MISC
 Process 10: Running with Q=3
-48      	        	        	        	        	        	        	        	        	READY   	RUN     	        	        	        	        	        	        	        	        	        	        
+47      	        	        	        	        	        	        	        	        	READY   	RUN     	        	        	        	        	        	        	        	        	        	        
 Executing PID 10: PC=1, Inst=201, Quantum=2
 PID: 10, PC: 1, inst: 201, EXEC: 1
 Process 10: Running with Q=2
-49      	        	        	        	        	        	        	        	        	READY   	RUN     	NEW     	        	        	        	        	        	        	        	        	        
+48      	        	        	        	        	        	        	        	        	READY   	RUN     	NEW     	        	        	        	        	        	        	        	        	        
 PID: 11, STATE: NEW, TIS: 0
 Executing PID 10: PC=2, Inst=-2, Quantum=1
-PID: 10, PC: 2, inst: -2, BLOCK: 52
-50      	        	        	        	        	        	        	        	        	RUN     	BLOCKED 	NEW     	        	        	        	        	        	        	        	        	        
+PID: 10, PC: 2, inst: -2, BLOCK: 51
+49      	        	        	        	        	        	        	        	        	RUN     	BLOCKED 	NEW     	        	        	        	        	        	        	        	        	        
 PID: 11, STATE: NEW, TIS: 1
 Executing PID 9: PC=3, Inst=1, Quantum=3
 PID: 9, PC: 3, inst: 1, MISC
 Process 9: Running with Q=3
-51      	        	        	        	        	        	        	        	        	RUN     	BLOCKED 	READY   	        	        	        	        	        	        	        	        	        
-Executing PID 9: PC=4, Inst=808792412, Quantum=2
-Error: Invalid process or PC. PID: 9, PC: 4, inst: 808792412
-52      	        	        	        	        	        	        	        	        	EXIT    	READY   	RUN     	        	        	        	        	        	        	        	        	        
+50      	        	        	        	        	        	        	        	        	RUN     	BLOCKED 	READY   	        	        	        	        	        	        	        	        	        
+Executing PID 9: PC=4, Inst=1835228276, Quantum=2
+Error: Invalid process or PC. PID: 9, PC: 4, inst: 1835228276
+51      	        	        	        	        	        	        	        	        	EXIT    	READY   	RUN     	        	        	        	        	        	        	        	        	        
 Executing PID 11: PC=0, Inst=300, Quantum=3
 PID: 11, PC: 0, inst: 300, MISC
 Process 11: Running with Q=3
-53      	        	        	        	        	        	        	        	        	        	READY   	RUN     	        	        	        	        	        	        	        	        	        
+52      	        	        	        	        	        	        	        	        	        	READY   	RUN     	        	        	        	        	        	        	        	        	        
 Executing PID 11: PC=1, Inst=201, Quantum=2
 PID: 11, PC: 1, inst: 201, EXEC: 1
 Process 11: Running with Q=2
-54      	        	        	        	        	        	        	        	        	        	READY   	RUN     	NEW     	        	        	        	        	        	        	        	        
+53      	        	        	        	        	        	        	        	        	        	READY   	RUN     	NEW     	        	        	        	        	        	        	        	        
 PID: 12, STATE: NEW, TIS: 0
 Executing PID 11: PC=2, Inst=-2, Quantum=1
-PID: 11, PC: 2, inst: -2, BLOCK: 57
-55      	        	        	        	        	        	        	        	        	        	RUN     	BLOCKED 	NEW     	        	        	        	        	        	        	        	        
+PID: 11, PC: 2, inst: -2, BLOCK: 56
+54      	        	        	        	        	        	        	        	        	        	RUN     	BLOCKED 	NEW     	        	        	        	        	        	        	        	        
 PID: 12, STATE: NEW, TIS: 1
 Executing PID 10: PC=3, Inst=1, Quantum=3
 PID: 10, PC: 3, inst: 1, MISC
 Process 10: Running with Q=3
-56      	        	        	        	        	        	        	        	        	        	RUN     	BLOCKED 	READY   	        	        	        	        	        	        	        	        
-Executing PID 10: PC=4, Inst=1917869164, Quantum=2
-Error: Invalid process or PC. PID: 10, PC: 4, inst: 1917869164
-57      	        	        	        	        	        	        	        	        	        	EXIT    	READY   	RUN     	        	        	        	        	        	        	        	        
+55      	        	        	        	        	        	        	        	        	        	RUN     	BLOCKED 	READY   	        	        	        	        	        	        	        	        
+Executing PID 10: PC=4, Inst=808792412, Quantum=2
+Error: Invalid process or PC. PID: 10, PC: 4, inst: 808792412
+56      	        	        	        	        	        	        	        	        	        	EXIT    	READY   	RUN     	        	        	        	        	        	        	        	        
 Executing PID 12: PC=0, Inst=300, Quantum=3
 PID: 12, PC: 0, inst: 300, MISC
 Process 12: Running with Q=3
-58      	        	        	        	        	        	        	        	        	        	        	READY   	RUN     	        	        	        	        	        	        	        	        
+57      	        	        	        	        	        	        	        	        	        	        	READY   	RUN     	        	        	        	        	        	        	        	        
 Executing PID 12: PC=1, Inst=201, Quantum=2
 PID: 12, PC: 1, inst: 201, EXEC: 1
 Process 12: Running with Q=2
-59      	        	        	        	        	        	        	        	        	        	        	READY   	RUN     	NEW     	        	        	        	        	        	        	        
+58      	        	        	        	        	        	        	        	        	        	        	READY   	RUN     	NEW     	        	        	        	        	        	        	        
 PID: 13, STATE: NEW, TIS: 0
 Executing PID 12: PC=2, Inst=-2, Quantum=1
-PID: 12, PC: 2, inst: -2, BLOCK: 62
-60      	        	        	        	        	        	        	        	        	        	        	RUN     	BLOCKED 	NEW     	        	        	        	        	        	        	        
+PID: 12, PC: 2, inst: -2, BLOCK: 61
+59      	        	        	        	        	        	        	        	        	        	        	RUN     	BLOCKED 	NEW     	        	        	        	        	        	        	        
 PID: 13, STATE: NEW, TIS: 1
 Executing PID 11: PC=3, Inst=1, Quantum=3
 PID: 11, PC: 3, inst: 1, MISC
 Process 11: Running with Q=3
-61      	        	        	        	        	        	        	        	        	        	        	RUN     	BLOCKED 	READY   	        	        	        	        	        	        	        
-Executing PID 11: PC=4, Inst=1766677619, Quantum=2
-Error: Invalid process or PC. PID: 11, PC: 4, inst: 1766677619
-62      	        	        	        	        	        	        	        	        	        	        	EXIT    	READY   	RUN     	        	        	        	        	        	        	        
+60      	        	        	        	        	        	        	        	        	        	        	RUN     	BLOCKED 	READY   	        	        	        	        	        	        	        
+Executing PID 11: PC=4, Inst=947398688, Quantum=2
+Error: Invalid process or PC. PID: 11, PC: 4, inst: 947398688
+61      	        	        	        	        	        	        	        	        	        	        	EXIT    	READY   	RUN     	        	        	        	        	        	        	        
 Executing PID 13: PC=0, Inst=300, Quantum=3
 PID: 13, PC: 0, inst: 300, MISC
 Process 13: Running with Q=3
-63      	        	        	        	        	        	        	        	        	        	        	        	READY   	RUN     	        	        	        	        	        	        	        
+62      	        	        	        	        	        	        	        	        	        	        	        	READY   	RUN     	        	        	        	        	        	        	        
 Executing PID 13: PC=1, Inst=201, Quantum=2
 PID: 13, PC: 1, inst: 201, EXEC: 1
 Process 13: Running with Q=2
-64      	        	        	        	        	        	        	        	        	        	        	        	READY   	RUN     	NEW     	        	        	        	        	        	        
+63      	        	        	        	        	        	        	        	        	        	        	        	READY   	RUN     	NEW     	        	        	        	        	        	        
 PID: 14, STATE: NEW, TIS: 0
 Executing PID 13: PC=2, Inst=-2, Quantum=1
-PID: 13, PC: 2, inst: -2, BLOCK: 67
-65      	        	        	        	        	        	        	        	        	        	        	        	RUN     	BLOCKED 	NEW     	        	        	        	        	        	        
+PID: 13, PC: 2, inst: -2, BLOCK: 66
+64      	        	        	        	        	        	        	        	        	        	        	        	RUN     	BLOCKED 	NEW     	        	        	        	        	        	        
 PID: 14, STATE: NEW, TIS: 1
 Executing PID 12: PC=3, Inst=1, Quantum=3
 PID: 12, PC: 3, inst: 1, MISC
 Process 12: Running with Q=3
-66      	        	        	        	        	        	        	        	        	        	        	        	RUN     	BLOCKED 	READY   	        	        	        	        	        	        
-Executing PID 12: PC=4, Inst=1852400220, Quantum=2
-Error: Invalid process or PC. PID: 12, PC: 4, inst: 1852400220
-67      	        	        	        	        	        	        	        	        	        	        	        	EXIT    	READY   	RUN     	        	        	        	        	        	        
+65      	        	        	        	        	        	        	        	        	        	        	        	RUN     	BLOCKED 	READY   	        	        	        	        	        	        
+Executing PID 12: PC=4, Inst=1160657741, Quantum=2
+Error: Invalid process or PC. PID: 12, PC: 4, inst: 1160657741
+66      	        	        	        	        	        	        	        	        	        	        	        	EXIT    	READY   	RUN     	        	        	        	        	        	        
 Executing PID 14: PC=0, Inst=300, Quantum=3
 PID: 14, PC: 0, inst: 300, MISC
 Process 14: Running with Q=3
-68      	        	        	        	        	        	        	        	        	        	        	        	        	READY   	RUN     	        	        	        	        	        	        
+67      	        	        	        	        	        	        	        	        	        	        	        	        	READY   	RUN     	        	        	        	        	        	        
 Executing PID 14: PC=1, Inst=201, Quantum=2
 PID: 14, PC: 1, inst: 201, EXEC: 1
 Process 14: Running with Q=2
-69      	        	        	        	        	        	        	        	        	        	        	        	        	READY   	RUN     	NEW     	        	        	        	        	        
+68      	        	        	        	        	        	        	        	        	        	        	        	        	READY   	RUN     	NEW     	        	        	        	        	        
 PID: 15, STATE: NEW, TIS: 0
 Executing PID 14: PC=2, Inst=-2, Quantum=1
-PID: 14, PC: 2, inst: -2, BLOCK: 72
-70      	        	        	        	        	        	        	        	        	        	        	        	        	RUN     	BLOCKED 	NEW     	        	        	        	        	        
+PID: 14, PC: 2, inst: -2, BLOCK: 71
+69      	        	        	        	        	        	        	        	        	        	        	        	        	RUN     	BLOCKED 	NEW     	        	        	        	        	        
 PID: 15, STATE: NEW, TIS: 1
 Executing PID 13: PC=3, Inst=1, Quantum=3
 PID: 13, PC: 3, inst: 1, MISC
 Process 13: Running with Q=3
-71      	        	        	        	        	        	        	        	        	        	        	        	        	RUN     	BLOCKED 	READY   	        	        	        	        	        
-Executing PID 13: PC=4, Inst=1146051659, Quantum=2
-Error: Invalid process or PC. PID: 13, PC: 4, inst: 1146051659
-72      	        	        	        	        	        	        	        	        	        	        	        	        	EXIT    	READY   	RUN     	        	        	        	        	        
+70      	        	        	        	        	        	        	        	        	        	        	        	        	RUN     	BLOCKED 	READY   	        	        	        	        	        
+Executing PID 13: PC=4, Inst=862807412, Quantum=2
+Error: Invalid process or PC. PID: 13, PC: 4, inst: 862807412
+71      	        	        	        	        	        	        	        	        	        	        	        	        	EXIT    	READY   	RUN     	        	        	        	        	        
 Executing PID 15: PC=0, Inst=300, Quantum=3
 PID: 15, PC: 0, inst: 300, MISC
 Process 15: Running with Q=3
-73      	        	        	        	        	        	        	        	        	        	        	        	        	        	READY   	RUN     	        	        	        	        	        
+72      	        	        	        	        	        	        	        	        	        	        	        	        	        	READY   	RUN     	        	        	        	        	        
 Executing PID 15: PC=1, Inst=201, Quantum=2
 PID: 15, PC: 1, inst: 201, EXEC: 1
 Process 15: Running with Q=2
-74      	        	        	        	        	        	        	        	        	        	        	        	        	        	READY   	RUN     	NEW     	        	        	        	        
+73      	        	        	        	        	        	        	        	        	        	        	        	        	        	READY   	RUN     	NEW     	        	        	        	        
 PID: 16, STATE: NEW, TIS: 0
 Executing PID 15: PC=2, Inst=-2, Quantum=1
-PID: 15, PC: 2, inst: -2, BLOCK: 77
-75      	        	        	        	        	        	        	        	        	        	        	        	        	        	RUN     	BLOCKED 	NEW     	        	        	        	        
+PID: 15, PC: 2, inst: -2, BLOCK: 76
+74      	        	        	        	        	        	        	        	        	        	        	        	        	        	RUN     	BLOCKED 	NEW     	        	        	        	        
 PID: 16, STATE: NEW, TIS: 1
 Executing PID 14: PC=3, Inst=1, Quantum=3
 PID: 14, PC: 3, inst: 1, MISC
 Process 14: Running with Q=3
-76      	        	        	        	        	        	        	        	        	        	        	        	        	        	RUN     	BLOCKED 	READY   	        	        	        	        
-Executing PID 14: PC=4, Inst=1767332980, Quantum=2
-Error: Invalid process or PC. PID: 14, PC: 4, inst: 1767332980
-77      	        	        	        	        	        	        	        	        	        	        	        	        	        	EXIT    	READY   	RUN     	        	        	        	        
+75      	        	        	        	        	        	        	        	        	        	        	        	        	        	RUN     	BLOCKED 	READY   	        	        	        	        
+Executing PID 14: PC=4, Inst=1766677619, Quantum=2
+Error: Invalid process or PC. PID: 14, PC: 4, inst: 1766677619
+76      	        	        	        	        	        	        	        	        	        	        	        	        	        	EXIT    	READY   	RUN     	        	        	        	        
 Executing PID 16: PC=0, Inst=300, Quantum=3
 PID: 16, PC: 0, inst: 300, MISC
 Process 16: Running with Q=3
-78      	        	        	        	        	        	        	        	        	        	        	        	        	        	        	READY   	RUN     	        	        	        	        
+77      	        	        	        	        	        	        	        	        	        	        	        	        	        	        	READY   	RUN     	        	        	        	        
 Executing PID 16: PC=1, Inst=201, Quantum=2
 PID: 16, PC: 1, inst: 201, EXEC: 1
 Process 16: Running with Q=2
-79      	        	        	        	        	        	        	        	        	        	        	        	        	        	        	READY   	RUN     	NEW     	        	        	        
+78      	        	        	        	        	        	        	        	        	        	        	        	        	        	        	READY   	RUN     	NEW     	        	        	        
 PID: 17, STATE: NEW, TIS: 0
 Executing PID 16: PC=2, Inst=-2, Quantum=1
-PID: 16, PC: 2, inst: -2, BLOCK: 82
-80      	        	        	        	        	        	        	        	        	        	        	        	        	        	        	RUN     	BLOCKED 	NEW     	        	        	        
+PID: 16, PC: 2, inst: -2, BLOCK: 81
+79      	        	        	        	        	        	        	        	        	        	        	        	        	        	        	RUN     	BLOCKED 	NEW     	        	        	        
 PID: 17, STATE: NEW, TIS: 1
 Executing PID 15: PC=3, Inst=1, Quantum=3
 PID: 15, PC: 3, inst: 1, MISC
 Process 15: Running with Q=3
-81      	        	        	        	        	        	        	        	        	        	        	        	        	        	        	RUN     	BLOCKED 	READY   	        	        	        
-Executing PID 15: PC=4, Inst=1869762652, Quantum=2
-Error: Invalid process or PC. PID: 15, PC: 4, inst: 1869762652
-82      	        	        	        	        	        	        	        	        	        	        	        	        	        	        	EXIT    	READY   	RUN     	        	        	        
+80      	        	        	        	        	        	        	        	        	        	        	        	        	        	        	RUN     	BLOCKED 	READY   	        	        	        
+Executing PID 15: PC=4, Inst=1886352491, Quantum=2
+Error: Invalid process or PC. PID: 15, PC: 4, inst: 1886352491
+81      	        	        	        	        	        	        	        	        	        	        	        	        	        	        	EXIT    	READY   	RUN     	        	        	        
 Executing PID 17: PC=0, Inst=300, Quantum=3
 PID: 17, PC: 0, inst: 300, MISC
 Process 17: Running with Q=3
-83      	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	READY   	RUN     	        	        	        
+82      	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	READY   	RUN     	        	        	        
 Executing PID 17: PC=1, Inst=201, Quantum=2
 PID: 17, PC: 1, inst: 201, EXEC: 1
 Process 17: Running with Q=2
-84      	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	READY   	RUN     	NEW     	        	        
+83      	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	READY   	RUN     	NEW     	        	        
 PID: 18, STATE: NEW, TIS: 0
 Executing PID 17: PC=2, Inst=-2, Quantum=1
-PID: 17, PC: 2, inst: -2, BLOCK: 87
-85      	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	RUN     	BLOCKED 	NEW     	        	        
+PID: 17, PC: 2, inst: -2, BLOCK: 86
+84      	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	RUN     	BLOCKED 	NEW     	        	        
 PID: 18, STATE: NEW, TIS: 1
 Executing PID 16: PC=3, Inst=1, Quantum=3
 PID: 16, PC: 3, inst: 1, MISC
 Process 16: Running with Q=3
-86      	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	RUN     	BLOCKED 	READY   	        	        
-Executing PID 16: PC=4, Inst=1917869164, Quantum=2
-Error: Invalid process or PC. PID: 16, PC: 4, inst: 1917869164
-87      	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	EXIT    	READY   	RUN     	        	        
+85      	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	RUN     	BLOCKED 	READY   	        	        
+Executing PID 16: PC=4, Inst=1633906508, Quantum=2
+Error: Invalid process or PC. PID: 16, PC: 4, inst: 1633906508
+86      	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	EXIT    	READY   	RUN     	        	        
 Executing PID 18: PC=0, Inst=300, Quantum=3
 PID: 18, PC: 0, inst: 300, MISC
 Process 18: Running with Q=3
-88      	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	READY   	RUN     	        	        
+87      	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	READY   	RUN     	        	        
 Executing PID 18: PC=1, Inst=201, Quantum=2
 PID: 18, PC: 1, inst: 201, EXEC: 1
 Process 18: Running with Q=2
-89      	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	READY   	RUN     	NEW     	        
+88      	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	READY   	RUN     	NEW     	        
 PID: 19, STATE: NEW, TIS: 0
 Executing PID 18: PC=2, Inst=-2, Quantum=1
-PID: 18, PC: 2, inst: -2, BLOCK: 92
-90      	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	RUN     	BLOCKED 	NEW     	        
+PID: 18, PC: 2, inst: -2, BLOCK: 91
+89      	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	RUN     	BLOCKED 	NEW     	        
 PID: 19, STATE: NEW, TIS: 1
 Executing PID 17: PC=3, Inst=1, Quantum=3
 PID: 17, PC: 3, inst: 1, MISC
 Process 17: Running with Q=3
-91      	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	RUN     	BLOCKED 	READY   	        
-Executing PID 17: PC=4, Inst=1852397404, Quantum=2
-Error: Invalid process or PC. PID: 17, PC: 4, inst: 1852397404
-92      	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	EXIT    	READY   	RUN     	        
+90      	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	RUN     	BLOCKED 	READY   	        
+Executing PID 17: PC=4, Inst=1432107587, Quantum=2
+Error: Invalid process or PC. PID: 17, PC: 4, inst: 1432107587
+91      	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	EXIT    	READY   	RUN     	        
 Executing PID 19: PC=0, Inst=300, Quantum=3
 PID: 19, PC: 0, inst: 300, MISC
 Process 19: Running with Q=3
-93      	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	READY   	RUN     	        
+92      	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	READY   	RUN     	        
 Executing PID 19: PC=1, Inst=201, Quantum=2
 PID: 19, PC: 1, inst: 201, EXEC: 1
 Process 19: Running with Q=2
-94      	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	READY   	RUN     	NEW     
+93      	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	READY   	RUN     	NEW     
 PID: 20, STATE: NEW, TIS: 0
 Executing PID 19: PC=2, Inst=-2, Quantum=1
-PID: 19, PC: 2, inst: -2, BLOCK: 97
-95      	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	RUN     	BLOCKED 	NEW     
+PID: 19, PC: 2, inst: -2, BLOCK: 96
+94      	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	RUN     	BLOCKED 	NEW     
 PID: 20, STATE: NEW, TIS: 1
 Executing PID 18: PC=3, Inst=1, Quantum=3
 PID: 18, PC: 3, inst: 1, MISC
 Process 18: Running with Q=3
-96      	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	RUN     	BLOCKED 	READY   
+95      	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	RUN     	BLOCKED 	READY   
 Executing PID 18: PC=4, Inst=1146051659, Quantum=2
 Error: Invalid process or PC. PID: 18, PC: 4, inst: 1146051659
-97      	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	EXIT    	READY   	RUN     
+96      	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	EXIT    	READY   	RUN     
 Executing PID 20: PC=0, Inst=300, Quantum=3
 PID: 20, PC: 0, inst: 300, MISC
 Process 20: Running with Q=3
-98      	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	READY   	RUN     
+97      	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	READY   	RUN     
 Executing PID 20: PC=1, Inst=201, Quantum=2
 PID: 20, PC: 1, inst: 201, EXEC: 1
 Process 20: Running with Q=2
-99      	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	READY   	RUN     
+98      	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	READY   	RUN     
 Executing PID 20: PC=2, Inst=-2, Quantum=1
-PID: 20, PC: 2, inst: -2, BLOCK: 102
+PID: 20, PC: 2, inst: -2, BLOCK: 101
+99      	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	RUN     	BLOCKED 
+Executing PID 19: PC=3, Inst=1, Quantum=3
+PID: 19, PC: 3, inst: 1, MISC
+Process 19: Running with Q=3
 100     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	RUN     	BLOCKED 

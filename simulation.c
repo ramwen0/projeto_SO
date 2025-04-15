@@ -38,40 +38,66 @@ void initialize_system_with_input(SimulationSystem* system, SimulationInput inpu
 
 
 /* Queue operations */
-void update_blocked_processes(SimulationSystem* system) { // BLOCKED to READY
-    if (!system->blocked_queue) return;
+void update_blocked_processes(SimulationSystem* system) {
+    if (!system || !system->blocked_queue) return;
 
     size_t size = queueSize(system->blocked_queue);
+    PCB* to_ready[size];
+    int ready_count = 0;
+
+    // First pass: identify which processes should be moved
     for (size_t i = 0; i < size; i++) {
         PCB* proc = (PCB*)getQueueNodeAt(system->blocked_queue, i);
+        if (!proc) continue;
 
         proc->time_in_state++;
+
         if (proc->blocked_until <= system->current_time) {
-            proc->state = READY;
-            if (removeNodeByData(system->blocked_queue, proc)) {
-                enqueue(system->ready_queue, proc);
-                proc->pc++;
-            }
+            to_ready[ready_count++] = proc;
+        }
+    }
+
+    // Second pass: safely move them to ready queue
+    for (int i = 0; i < ready_count; i++) {
+        PCB* proc = to_ready[i];
+        proc->state = READY;
+        if (removeNodeByData(system->blocked_queue, proc)) {
+            enqueue(system->ready_queue, proc);
+            proc->pc++;  // Resume after block
         }
     }
 }
 
-void update_new_processes(SimulationSystem* system) { // NEW to READY - 2 instants
-    if (!system->new_queue) return;
+void update_new_processes(SimulationSystem* system) {
+    if (!system || !system->new_queue) return;
 
     size_t size = queueSize(system->new_queue);
+    PCB* to_ready[size];
+    int ready_count = 0;
+
+    // First pass: check which processes are ready to move
     for (size_t i = 0; i < size; i++) {
         PCB* proc = (PCB*)getQueueNodeAt(system->new_queue, i);
+        if (!proc) continue;
+
         printf("PID: %d, STATE: NEW, TIS: %d\n", proc->pid, proc->time_in_state);
         proc->time_in_state++;
+
         if (proc->time_in_state >= 2) {
-            proc->state = READY;
-            if (removeNodeByData(system->new_queue, proc)) {
-                enqueue(system->ready_queue, proc);
-            }
+            to_ready[ready_count++] = proc;
+        }
+    }
+
+    // Second pass: move them to the ready queue
+    for (int i = 0; i < ready_count; i++) {
+        PCB* proc = to_ready[i];
+        proc->state = READY;
+        if (removeNodeByData(system->new_queue, proc)) {
+            enqueue(system->ready_queue, proc);
         }
     }
 }
+
 
 void update_exit_processes(SimulationSystem* system) { // EXIT gone - 1 instant
     if (!system->exit_queue) return;
@@ -287,27 +313,22 @@ void run_simulation(SimulationSystem* system) {
     print_process_instructions(system);
 
     printf("time inst\tproc1\tproc2\tproc3\tproc4\tproc5\tproc6\tproc7\tproc8\tproc9\tproc10\tproc11\tproc12\tproc13\tproc14\tproc15\tproc16\tproc17\tproc18\tproc19\tproc20\n");
-    print_current_state(system, 1);
 
-    for (int time = 2; time <= 100; time++) {
+    for (int time = 1; time <= 100; time++) {
         system->current_time = time;
 
-        // First handle new arrivals (EXEC instructions from previous cycle)
         update_new_processes(system);
         update_blocked_processes(system);
         update_exit_processes(system);
 
-        // Then execute running process (which may create new processes)
         if (system->running_process) {
             execute_running_process(system);
         }
 
-        // Then schedule next process if needed
         if (!system->running_process) {
             schedule_next_process(system);
         }
 
-        // Finally print the state after all updates
         print_current_state(system, time);
 
         if (isEmpty(system->new_queue) &&
@@ -315,7 +336,7 @@ void run_simulation(SimulationSystem* system) {
             isEmpty(system->blocked_queue) &&
             isEmpty(system->exit_queue) &&
             !system->running_process) {
-            break; // Exit early if nothing left to do
+            break;
         }
     }
 }

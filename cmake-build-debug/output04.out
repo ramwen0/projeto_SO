@@ -6,12 +6,291 @@ Program 3: [2, 4, 5, 4554, -65, 215]
 Program 4: [205, 206, 7, 5665, -70, 310]
 =================================
 time inst	proc1	proc2	proc3	proc4	proc5	proc6	proc7	proc8	proc9	proc10	proc11	proc12	proc13	proc14	proc15	proc16	proc17	proc18	proc19	proc20
-1       	NEW     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
 PID: 1, STATE: NEW, TIS: 0
-2       	NEW     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
+1       	NEW     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
 PID: 1, STATE: NEW, TIS: 1
+2       	RUN     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
+Executing PID 1: PC=0, Inst=215, Quantum=3
+PID: 1, PC: 0, inst: 215, EXEC: 15
+Process 1: Running with Q=3
 3       	RUN     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
-Executing PID 1: PC=0, Inst=1217290048, Quantum=3
-Error: Invalid process or PC. PID: 1, PC: 0, inst: 1217290048
-4       	EXIT    	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
-5       	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
+Executing PID 1: PC=1, Inst=202, Quantum=2
+PID: 1, PC: 1, inst: 202, EXEC: 2
+Process 1: Running with Q=2
+4       	RUN     	NEW     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
+PID: 2, STATE: NEW, TIS: 0
+Executing PID 1: PC=2, Inst=1, Quantum=1
+PID: 1, PC: 2, inst: 1, MISC
+Process 1: Running with Q=1
+5       	EXIT    	NEW     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
+PID: 2, STATE: NEW, TIS: 1
+6       	        	RUN     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
+Executing PID 2: PC=0, Inst=203, Quantum=3
+PID: 2, PC: 0, inst: 203, EXEC: 3
+Process 2: Running with Q=3
+7       	        	RUN     	NEW     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
+PID: 3, STATE: NEW, TIS: 0
+Executing PID 2: PC=1, Inst=204, Quantum=2
+PID: 2, PC: 1, inst: 204, EXEC: 4
+Process 2: Running with Q=2
+8       	        	RUN     	NEW     	NEW     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
+PID: 3, STATE: NEW, TIS: 1
+PID: 4, STATE: NEW, TIS: 0
+Executing PID 2: PC=2, Inst=3, Quantum=1
+PID: 2, PC: 2, inst: 3, MISC
+Process 2: Running with Q=1
+9       	        	EXIT    	RUN     	NEW     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
+PID: 4, STATE: NEW, TIS: 1
+Executing PID 3: PC=0, Inst=201, Quantum=3
+PID: 3, PC: 0, inst: 201, EXEC: 1
+Process 3: Running with Q=3
+10      	        	        	RUN     	READY   	NEW     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
+PID: 5, STATE: NEW, TIS: 0
+Executing PID 3: PC=1, Inst=2, Quantum=2
+PID: 3, PC: 1, inst: 2, MISC
+Process 3: Running with Q=2
+11      	        	        	RUN     	READY   	NEW     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
+PID: 5, STATE: NEW, TIS: 1
+Executing PID 3: PC=2, Inst=3, Quantum=1
+PID: 3, PC: 2, inst: 3, MISC
+Process 3: Running with Q=1
+12      	        	        	EXIT    	RUN     	READY   	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
+Executing PID 4: PC=0, Inst=2, Quantum=3
+PID: 4, PC: 0, inst: 2, MISC
+Process 4: Running with Q=3
+13      	        	        	        	RUN     	READY   	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
+Executing PID 4: PC=1, Inst=4, Quantum=2
+PID: 4, PC: 1, inst: 4, MISC
+Process 4: Running with Q=2
+14      	        	        	        	RUN     	READY   	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
+Executing PID 4: PC=2, Inst=5, Quantum=1
+PID: 4, PC: 2, inst: 5, MISC
+Process 4: Running with Q=1
+15      	        	        	        	EXIT    	RUN     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
+Executing PID 5: PC=0, Inst=215, Quantum=3
+PID: 5, PC: 0, inst: 215, EXEC: 15
+Process 5: Running with Q=3
+16      	        	        	        	        	RUN     	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
+Executing PID 5: PC=1, Inst=202, Quantum=2
+PID: 5, PC: 1, inst: 202, EXEC: 2
+Process 5: Running with Q=2
+17      	        	        	        	        	RUN     	NEW     	        	        	        	        	        	        	        	        	        	        	        	        	        	        
+PID: 6, STATE: NEW, TIS: 0
+Executing PID 5: PC=2, Inst=1, Quantum=1
+PID: 5, PC: 2, inst: 1, MISC
+Process 5: Running with Q=1
+18      	        	        	        	        	EXIT    	NEW     	        	        	        	        	        	        	        	        	        	        	        	        	        	        
+PID: 6, STATE: NEW, TIS: 1
+19      	        	        	        	        	        	RUN     	        	        	        	        	        	        	        	        	        	        	        	        	        	        
+Executing PID 6: PC=0, Inst=203, Quantum=3
+PID: 6, PC: 0, inst: 203, EXEC: 3
+Process 6: Running with Q=3
+20      	        	        	        	        	        	RUN     	NEW     	        	        	        	        	        	        	        	        	        	        	        	        	        
+PID: 7, STATE: NEW, TIS: 0
+Executing PID 6: PC=1, Inst=204, Quantum=2
+PID: 6, PC: 1, inst: 204, EXEC: 4
+Process 6: Running with Q=2
+21      	        	        	        	        	        	RUN     	NEW     	NEW     	        	        	        	        	        	        	        	        	        	        	        	        
+PID: 7, STATE: NEW, TIS: 1
+PID: 8, STATE: NEW, TIS: 0
+Executing PID 6: PC=2, Inst=3, Quantum=1
+PID: 6, PC: 2, inst: 3, MISC
+Process 6: Running with Q=1
+22      	        	        	        	        	        	EXIT    	RUN     	NEW     	        	        	        	        	        	        	        	        	        	        	        	        
+PID: 8, STATE: NEW, TIS: 1
+Executing PID 7: PC=0, Inst=201, Quantum=3
+PID: 7, PC: 0, inst: 201, EXEC: 1
+Process 7: Running with Q=3
+23      	        	        	        	        	        	        	RUN     	READY   	NEW     	        	        	        	        	        	        	        	        	        	        	        
+PID: 9, STATE: NEW, TIS: 0
+Executing PID 7: PC=1, Inst=2, Quantum=2
+PID: 7, PC: 1, inst: 2, MISC
+Process 7: Running with Q=2
+24      	        	        	        	        	        	        	RUN     	READY   	NEW     	        	        	        	        	        	        	        	        	        	        	        
+PID: 9, STATE: NEW, TIS: 1
+Executing PID 7: PC=2, Inst=3, Quantum=1
+PID: 7, PC: 2, inst: 3, MISC
+Process 7: Running with Q=1
+25      	        	        	        	        	        	        	EXIT    	RUN     	READY   	        	        	        	        	        	        	        	        	        	        	        
+Executing PID 8: PC=0, Inst=2, Quantum=3
+PID: 8, PC: 0, inst: 2, MISC
+Process 8: Running with Q=3
+26      	        	        	        	        	        	        	        	RUN     	READY   	        	        	        	        	        	        	        	        	        	        	        
+Executing PID 8: PC=1, Inst=4, Quantum=2
+PID: 8, PC: 1, inst: 4, MISC
+Process 8: Running with Q=2
+27      	        	        	        	        	        	        	        	RUN     	READY   	        	        	        	        	        	        	        	        	        	        	        
+Executing PID 8: PC=2, Inst=5, Quantum=1
+PID: 8, PC: 2, inst: 5, MISC
+Process 8: Running with Q=1
+28      	        	        	        	        	        	        	        	EXIT    	RUN     	        	        	        	        	        	        	        	        	        	        	        
+Executing PID 9: PC=0, Inst=215, Quantum=3
+PID: 9, PC: 0, inst: 215, EXEC: 15
+Process 9: Running with Q=3
+29      	        	        	        	        	        	        	        	        	RUN     	        	        	        	        	        	        	        	        	        	        	        
+Executing PID 9: PC=1, Inst=202, Quantum=2
+PID: 9, PC: 1, inst: 202, EXEC: 2
+Process 9: Running with Q=2
+30      	        	        	        	        	        	        	        	        	RUN     	NEW     	        	        	        	        	        	        	        	        	        	        
+PID: 10, STATE: NEW, TIS: 0
+Executing PID 9: PC=2, Inst=1, Quantum=1
+PID: 9, PC: 2, inst: 1, MISC
+Process 9: Running with Q=1
+31      	        	        	        	        	        	        	        	        	EXIT    	NEW     	        	        	        	        	        	        	        	        	        	        
+PID: 10, STATE: NEW, TIS: 1
+32      	        	        	        	        	        	        	        	        	        	RUN     	        	        	        	        	        	        	        	        	        	        
+Executing PID 10: PC=0, Inst=203, Quantum=3
+PID: 10, PC: 0, inst: 203, EXEC: 3
+Process 10: Running with Q=3
+33      	        	        	        	        	        	        	        	        	        	RUN     	NEW     	        	        	        	        	        	        	        	        	        
+PID: 11, STATE: NEW, TIS: 0
+Executing PID 10: PC=1, Inst=204, Quantum=2
+PID: 10, PC: 1, inst: 204, EXEC: 4
+Process 10: Running with Q=2
+34      	        	        	        	        	        	        	        	        	        	RUN     	NEW     	NEW     	        	        	        	        	        	        	        	        
+PID: 11, STATE: NEW, TIS: 1
+PID: 12, STATE: NEW, TIS: 0
+Executing PID 10: PC=2, Inst=3, Quantum=1
+PID: 10, PC: 2, inst: 3, MISC
+Process 10: Running with Q=1
+35      	        	        	        	        	        	        	        	        	        	EXIT    	RUN     	NEW     	        	        	        	        	        	        	        	        
+PID: 12, STATE: NEW, TIS: 1
+Executing PID 11: PC=0, Inst=201, Quantum=3
+PID: 11, PC: 0, inst: 201, EXEC: 1
+Process 11: Running with Q=3
+36      	        	        	        	        	        	        	        	        	        	        	RUN     	READY   	NEW     	        	        	        	        	        	        	        
+PID: 13, STATE: NEW, TIS: 0
+Executing PID 11: PC=1, Inst=2, Quantum=2
+PID: 11, PC: 1, inst: 2, MISC
+Process 11: Running with Q=2
+37      	        	        	        	        	        	        	        	        	        	        	RUN     	READY   	NEW     	        	        	        	        	        	        	        
+PID: 13, STATE: NEW, TIS: 1
+Executing PID 11: PC=2, Inst=3, Quantum=1
+PID: 11, PC: 2, inst: 3, MISC
+Process 11: Running with Q=1
+38      	        	        	        	        	        	        	        	        	        	        	EXIT    	RUN     	READY   	        	        	        	        	        	        	        
+Executing PID 12: PC=0, Inst=2, Quantum=3
+PID: 12, PC: 0, inst: 2, MISC
+Process 12: Running with Q=3
+39      	        	        	        	        	        	        	        	        	        	        	        	RUN     	READY   	        	        	        	        	        	        	        
+Executing PID 12: PC=1, Inst=4, Quantum=2
+PID: 12, PC: 1, inst: 4, MISC
+Process 12: Running with Q=2
+40      	        	        	        	        	        	        	        	        	        	        	        	RUN     	READY   	        	        	        	        	        	        	        
+Executing PID 12: PC=2, Inst=5, Quantum=1
+PID: 12, PC: 2, inst: 5, MISC
+Process 12: Running with Q=1
+41      	        	        	        	        	        	        	        	        	        	        	        	EXIT    	RUN     	        	        	        	        	        	        	        
+Executing PID 13: PC=0, Inst=215, Quantum=3
+PID: 13, PC: 0, inst: 215, EXEC: 15
+Process 13: Running with Q=3
+42      	        	        	        	        	        	        	        	        	        	        	        	        	RUN     	        	        	        	        	        	        	        
+Executing PID 13: PC=1, Inst=202, Quantum=2
+PID: 13, PC: 1, inst: 202, EXEC: 2
+Process 13: Running with Q=2
+43      	        	        	        	        	        	        	        	        	        	        	        	        	RUN     	NEW     	        	        	        	        	        	        
+PID: 14, STATE: NEW, TIS: 0
+Executing PID 13: PC=2, Inst=1, Quantum=1
+PID: 13, PC: 2, inst: 1, MISC
+Process 13: Running with Q=1
+44      	        	        	        	        	        	        	        	        	        	        	        	        	EXIT    	NEW     	        	        	        	        	        	        
+PID: 14, STATE: NEW, TIS: 1
+45      	        	        	        	        	        	        	        	        	        	        	        	        	        	RUN     	        	        	        	        	        	        
+Executing PID 14: PC=0, Inst=203, Quantum=3
+PID: 14, PC: 0, inst: 203, EXEC: 3
+Process 14: Running with Q=3
+46      	        	        	        	        	        	        	        	        	        	        	        	        	        	RUN     	NEW     	        	        	        	        	        
+PID: 15, STATE: NEW, TIS: 0
+Executing PID 14: PC=1, Inst=204, Quantum=2
+PID: 14, PC: 1, inst: 204, EXEC: 4
+Process 14: Running with Q=2
+47      	        	        	        	        	        	        	        	        	        	        	        	        	        	RUN     	NEW     	NEW     	        	        	        	        
+PID: 15, STATE: NEW, TIS: 1
+PID: 16, STATE: NEW, TIS: 0
+Executing PID 14: PC=2, Inst=3, Quantum=1
+PID: 14, PC: 2, inst: 3, MISC
+Process 14: Running with Q=1
+48      	        	        	        	        	        	        	        	        	        	        	        	        	        	EXIT    	RUN     	NEW     	        	        	        	        
+PID: 16, STATE: NEW, TIS: 1
+Executing PID 15: PC=0, Inst=201, Quantum=3
+PID: 15, PC: 0, inst: 201, EXEC: 1
+Process 15: Running with Q=3
+49      	        	        	        	        	        	        	        	        	        	        	        	        	        	        	RUN     	READY   	NEW     	        	        	        
+PID: 17, STATE: NEW, TIS: 0
+Executing PID 15: PC=1, Inst=2, Quantum=2
+PID: 15, PC: 1, inst: 2, MISC
+Process 15: Running with Q=2
+50      	        	        	        	        	        	        	        	        	        	        	        	        	        	        	RUN     	READY   	NEW     	        	        	        
+PID: 17, STATE: NEW, TIS: 1
+Executing PID 15: PC=2, Inst=3, Quantum=1
+PID: 15, PC: 2, inst: 3, MISC
+Process 15: Running with Q=1
+51      	        	        	        	        	        	        	        	        	        	        	        	        	        	        	EXIT    	RUN     	READY   	        	        	        
+Executing PID 16: PC=0, Inst=2, Quantum=3
+PID: 16, PC: 0, inst: 2, MISC
+Process 16: Running with Q=3
+52      	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	RUN     	READY   	        	        	        
+Executing PID 16: PC=1, Inst=4, Quantum=2
+PID: 16, PC: 1, inst: 4, MISC
+Process 16: Running with Q=2
+53      	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	RUN     	READY   	        	        	        
+Executing PID 16: PC=2, Inst=5, Quantum=1
+PID: 16, PC: 2, inst: 5, MISC
+Process 16: Running with Q=1
+54      	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	EXIT    	RUN     	        	        	        
+Executing PID 17: PC=0, Inst=215, Quantum=3
+PID: 17, PC: 0, inst: 215, EXEC: 15
+Process 17: Running with Q=3
+55      	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	RUN     	        	        	        
+Executing PID 17: PC=1, Inst=202, Quantum=2
+PID: 17, PC: 1, inst: 202, EXEC: 2
+Process 17: Running with Q=2
+56      	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	RUN     	NEW     	        	        
+PID: 18, STATE: NEW, TIS: 0
+Executing PID 17: PC=2, Inst=1, Quantum=1
+PID: 17, PC: 2, inst: 1, MISC
+Process 17: Running with Q=1
+57      	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	EXIT    	NEW     	        	        
+PID: 18, STATE: NEW, TIS: 1
+58      	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	RUN     	        	        
+Executing PID 18: PC=0, Inst=203, Quantum=3
+PID: 18, PC: 0, inst: 203, EXEC: 3
+Process 18: Running with Q=3
+59      	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	RUN     	NEW     	        
+PID: 19, STATE: NEW, TIS: 0
+Executing PID 18: PC=1, Inst=204, Quantum=2
+PID: 18, PC: 1, inst: 204, EXEC: 4
+Process 18: Running with Q=2
+60      	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	RUN     	NEW     	NEW     
+PID: 19, STATE: NEW, TIS: 1
+PID: 20, STATE: NEW, TIS: 0
+Executing PID 18: PC=2, Inst=3, Quantum=1
+PID: 18, PC: 2, inst: 3, MISC
+Process 18: Running with Q=1
+61      	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	EXIT    	RUN     	NEW     
+PID: 20, STATE: NEW, TIS: 1
+Executing PID 19: PC=0, Inst=201, Quantum=3
+PID: 19, PC: 0, inst: 201, EXEC: 1
+Process 19: Running with Q=3
+62      	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	RUN     	READY   
+Executing PID 19: PC=1, Inst=2, Quantum=2
+PID: 19, PC: 1, inst: 2, MISC
+Process 19: Running with Q=2
+63      	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	RUN     	READY   
+Executing PID 19: PC=2, Inst=3, Quantum=1
+PID: 19, PC: 2, inst: 3, MISC
+Process 19: Running with Q=1
+64      	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	EXIT    	RUN     
+Executing PID 20: PC=0, Inst=2, Quantum=3
+PID: 20, PC: 0, inst: 2, MISC
+Process 20: Running with Q=3
+65      	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	RUN     
+Executing PID 20: PC=1, Inst=4, Quantum=2
+PID: 20, PC: 1, inst: 4, MISC
+Process 20: Running with Q=2
+66      	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	RUN     
+Executing PID 20: PC=2, Inst=5, Quantum=1
+PID: 20, PC: 2, inst: 5, MISC
+Process 20: Running with Q=1
+67      	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	EXIT    
+68      	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
