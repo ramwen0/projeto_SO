@@ -313,6 +313,9 @@ void run_simulation(SimulationSystem* system) {
     print_process_instructions(system);
 
     printf("time inst\tproc1\tproc2\tproc3\tproc4\tproc5\tproc6\tproc7\tproc8\tproc9\tproc10\tproc11\tproc12\tproc13\tproc14\tproc15\tproc16\tproc17\tproc18\tproc19\tproc20\n");
+    
+    // Adiciona o estado inicial antes do tempo 1
+    print_current_state(system, 1);
 
     for (int time = 1; time <= 100; time++) {
         system->current_time = time;
@@ -329,7 +332,7 @@ void run_simulation(SimulationSystem* system) {
             schedule_next_process(system);
         }
 
-        print_current_state(system, time);
+        print_current_state(system, time + 1); // +1 uma vez que o primeiro seria 0, mas e printado com 1
 
         if (isEmpty(system->new_queue) &&
             isEmpty(system->ready_queue) &&

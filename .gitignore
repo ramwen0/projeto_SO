@@ -1,0 +1,11 @@
+obj/simulation.o
+obj/queue.o
+obj/main.o
+obj/inputs.o
+bin/so_simulator
+output05.out
+output04.out
+output03.out
+output02.out
+output01.out
+output00.out
