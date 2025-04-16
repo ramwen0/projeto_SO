@@ -80,7 +80,7 @@ void update_new_processes(SimulationSystem* system) {
         PCB* proc = (PCB*)getQueueNodeAt(system->new_queue, i);
         if (!proc) continue;
 
-        printf("PID: %d, STATE: NEW, TIS: %d\n", proc->pid, proc->time_in_state);
+        // printf("PID: %d, STATE: NEW, TIS: %d\n", proc->pid, proc->time_in_state);
         proc->time_in_state++;
 
         if (proc->time_in_state >= 2) {
@@ -124,8 +124,8 @@ void update_exit_processes(SimulationSystem* system) { // EXIT gone - 1 instant
 /* Instruction EXEC */
 void execute_instruction(SimulationSystem* system, PCB* proc, int instruction) {
     if (!proc || !proc->instructions || proc->pc < 0 || proc->pc >= proc->instruction_count) {
-        printf("Error: Invalid process or PC. PID: %d, PC: %d, inst: %d\n",
-               proc ? proc->pid : -1, proc ? proc->pc : -1, instruction);
+        /* printf("Error: Invalid process or PC. PID: %d, PC: %d, inst: %d\n",
+               proc ? proc->pid : -1, proc ? proc->pc : -1, instruction); */
         if (proc) {
             proc->state = EXIT;
             proc->time_in_state = 0;
@@ -136,7 +136,7 @@ void execute_instruction(SimulationSystem* system, PCB* proc, int instruction) {
     }
 
     if (instruction == 0) { // HALT
-        printf("PID: %d, PC: %d, inst: %d, HALT\n", proc->pid, proc->pc, instruction);
+        // printf("PID: %d, PC: %d, inst: %d, HALT\n", proc->pid, proc->pc, instruction);
         proc->state = EXIT;
         proc->time_in_state = 0;
         enqueue(system->exit_queue, proc);
@@ -146,30 +146,31 @@ void execute_instruction(SimulationSystem* system, PCB* proc, int instruction) {
 
     if (instruction >= 101 && instruction <= 199) { // JUMP
         int jump = instruction - 100;
-        printf("PID: %d, PC: %d, inst: %d, JUMP: %d\n", proc->pid, proc->pc, instruction, jump);
+        // printf("PID: %d, PC: %d, inst: %d, JUMP: %d\n", proc->pid, proc->pc, instruction, jump);
         proc->pc -= jump;
         if (proc->pc < 0) proc->pc = 0;
     } else if (instruction >= 201 && instruction <= 299) { // EXEC
         int program_id = instruction % 100;
-        printf("PID: %d, PC: %d, inst: %d, EXEC: %d\n", proc->pid, proc->pc, instruction, program_id);
+        // printf("PID: %d, PC: %d, inst: %d, EXEC: %d\n", proc->pid, proc->pc, instruction, program_id);
 
         if (system->next_pid <= 20 && program_id >= 0 && program_id < 5) {
             PCB* new_proc = create_new_process(system, program_id - 1);
             if (new_proc) {
                 enqueue(system->new_queue, new_proc);
+                //new_proc->time_in_state++;
             }
         }
         proc->pc++;
     } else if (instruction < 0) { // BLOCKED
         proc->state = BLOCKED;
         proc->blocked_until = system->current_time + (-instruction);
-        printf("PID: %d, PC: %d, inst: %d, BLOCK: %d\n", proc->pid, proc->pc, instruction, proc->blocked_until);
+        // printf("PID: %d, PC: %d, inst: %d, BLOCK: %d\n", proc->pid, proc->pc, instruction, proc->blocked_until);
         remove_process_from_all_queues(system, proc);
         enqueue(system->blocked_queue, proc);
         system->running_process = NULL;
         return;
     } else { // Other instructions
-        printf("PID: %d, PC: %d, inst: %d, MISC\n", proc->pid, proc->pc, instruction);
+        // printf("PID: %d, PC: %d, inst: %d, MISC\n", proc->pid, proc->pc, instruction);
         proc->pc++;
     }
 }
@@ -207,15 +208,15 @@ void execute_running_process(SimulationSystem* system) {
     PCB* running_proc = system->running_process;
 
     //DEBUG -- Inst wrong!
-    printf(
+    /* printf(
             "Executing PID %d: PC=%d, Inst=%d, Quantum=%d\n",
             running_proc->pid, running_proc->pc, running_proc->instructions[running_proc->pc], running_proc->remaining_quantum
-    );
+    ); */
 
     if (running_proc->pc > running_proc->instruction_count || // out of bounds or
         (running_proc->pc <= running_proc->instruction_count && // in bounds and
          running_proc->instructions[running_proc->pc] == 0)){ // HALT
-        printf("PID %d, count: %d, Inst: %d, HALTing\n", running_proc->pid, running_proc->instruction_count, running_proc->instructions[running_proc->pc]);
+        // printf("PID %d, count: %d, Inst: %d, HALTing\n", running_proc->pid, running_proc->instruction_count, running_proc->instructions[running_proc->pc]);
         running_proc->state = EXIT;
         running_proc->time_in_state = 0;
         enqueue(system->exit_queue, running_proc);
@@ -228,13 +229,13 @@ void execute_running_process(SimulationSystem* system) {
 
     if (running_proc->state == RUNNING){
         //DEBUG
-        printf("Process %d: Running with Q=%d\n", running_proc->pid, running_proc->remaining_quantum);
+        // printf("Process %d: Running with Q=%d\n", running_proc->pid, running_proc->remaining_quantum);
 
         running_proc->remaining_quantum--;
         if(running_proc->remaining_quantum <= 0) { // done with Q=3
-            running_proc->state = EXIT;
+            running_proc->state = READY;
             running_proc->time_in_state = 0;
-            enqueue(system->exit_queue, running_proc);
+            enqueue(system->ready_queue, running_proc);
             system->running_process = NULL;
         }
     }
@@ -313,27 +314,26 @@ void run_simulation(SimulationSystem* system) {
     print_process_instructions(system);
 
     printf("time inst\tproc1\tproc2\tproc3\tproc4\tproc5\tproc6\tproc7\tproc8\tproc9\tproc10\tproc11\tproc12\tproc13\tproc14\tproc15\tproc16\tproc17\tproc18\tproc19\tproc20\n");
-    
-    // Adiciona o estado inicial antes do tempo 1
-    print_current_state(system, 1);
 
     for (int time = 1; time <= 100; time++) {
         system->current_time = time;
 
+        // Print state at the start of this time step
+        print_current_state(system, time);
+        
         update_new_processes(system);
         update_blocked_processes(system);
         update_exit_processes(system);
-
+        
         if (system->running_process) {
             execute_running_process(system);
         }
-
+        
         if (!system->running_process) {
             schedule_next_process(system);
         }
-
-        print_current_state(system, time + 1); // +1 uma vez que o primeiro seria 0, mas e printado com 1
-
+        
+        
         if (isEmpty(system->new_queue) &&
             isEmpty(system->ready_queue) &&
             isEmpty(system->blocked_queue) &&
