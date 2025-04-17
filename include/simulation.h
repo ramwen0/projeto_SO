@@ -33,6 +33,8 @@ typedef struct {
     int programs[5][20];    // Programas disponíveis (como no enunciado)
     int program_counts[5];  // instruction counts
     int program_lengths[5]; // Tamanhos dos programas
+
+    int pre_new_printed[20]; // 0 = not printed, 1 = printed
 } SimulationSystem;
 
 //System Simulation
