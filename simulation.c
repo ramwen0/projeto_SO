@@ -312,49 +312,43 @@ void print_current_state(SimulationSystem *system, int time)
     if (!system)
         return;
 
-    printf("%-8d", time);
+    printf("%-10d", time);
 
     for (int pid = 1; pid <= 20; pid++)
     {
         PCB *proc = system->processes[pid - 1];
         const char *state = "";
 
-        // Print "NEW" one instant before the process is created (except for the first process)
+    
         if (!proc && pid != 1 && system->pre_new_printed[pid - 1] == 0)
         {
             int will_be_created = 0;
             PCB *candidate = NULL;
 
-            // Check running process first
             if (system->running_process && system->running_process->state != EXIT &&
                 system->running_process->instructions &&
                 system->running_process->pc < system->running_process->instruction_count)
             {
                 candidate = system->running_process;
             }
-            else if (!isEmpty(system->ready_queue))
+            else if (!system->running_process && !isEmpty(system->ready_queue))
             {
-                // Otherwise, check the next ready process
                 candidate = (PCB *)getQueueNodeAt(system->ready_queue, 0);
             }
 
-            if (candidate)
-            {
+            if (candidate) {
                 int inst = candidate->instructions[candidate->pc];
-                if ((inst >= 201 && inst <= 205) && (system->next_pid == pid))
-                {
+
+                if ((inst >= 201 && inst <= 205) && (system->next_pid == pid)) {
                     will_be_created = 1;
                 }
             }
 
-            if (will_be_created)
-            {
+            if (will_be_created) {
                 printf("\t%-8s", "NEW");
                 system->pre_new_printed[pid - 1] = 1;
                 continue;
-            }
-            else
-            {
+            } else {
                 printf("\t%-8s", "");
                 continue;
             }
@@ -385,30 +379,9 @@ void print_current_state(SimulationSystem *system, int time)
             }
         }
 
-        printf("\t%-8s", state);
+        printf("\t%-10s", state);
     }
     printf("\n");
-}
-
-// DEBUG HELPER
-void print_process_instructions(const SimulationSystem *system)
-{
-    if (!system)
-        return;
-
-    printf("===== Process Instructions =====\n");
-    for (int prog_id = 0; prog_id < 5; prog_id++)
-    {
-        printf("Program %d: [", prog_id);
-        for (int i = 0; i < system->program_lengths[prog_id]; i++)
-        {
-            printf("%d", system->programs[prog_id][i]);
-            if (i < system->program_lengths[prog_id] - 1)
-                printf(", ");
-        }
-        printf("]\n");
-    }
-    printf("=================================\n");
 }
 
 void remove_process_from_all_queues(SimulationSystem *system, PCB *proc)
@@ -428,9 +401,13 @@ void run_simulation(SimulationSystem *system)
     if (!system)
         return;
 
-    print_process_instructions(system);
+    printf("time inst   ");
+    
+    for (int i = 1; i <= 20; i++) 
+        printf("proc%-8d", i);
 
-    printf("time inst\tproc1\tproc2\tproc3\tproc4\tproc5\tproc6\tproc7\tproc8\tproc9\tproc10\tproc11\tproc12\tproc13\tproc14\tproc15\tproc16\tproc17\tproc18\tproc19\tproc20\n");
+    printf("\n");
+
 
     for (int time = 1; time <= 100; time++)
     {
